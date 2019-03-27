@@ -1,0 +1,46 @@
+// Documentation: https://sass-guidelin.es/#variables
+
+// Initialize a global variable at root level.
+// $variable: 'initial value';
+
+// When building a library, a framework, a grid system or any piece of Sass
+// that is intended to be distributed and used by external developers, all
+// configuration variables should be defined with the !default flag so they
+// can be overwritten.
+// $variable: 'only set if undefined' !default;
+
+// Create a mixin that overrides that global variable.
+// @mixin global-variable-overriding {
+//   $variable: 'mixin value' !global;
+// }
+
+//.local-scope::before {
+//   Create a local variable that shadows the global one.
+//   $variable: 'local value';
+//
+//   Include the mixin: it overrides the global variable.
+//   @include global-variable-overriding;
+//
+//   Print the variable’s value.
+//   It is the **local** one, since it shadows the global one.
+//   content: $variable;
+// }
+
+// Print the variable in another selector that does no shadowing.
+// It is the **global** one, as expected.
+// .other-local-scope::before {
+//    content: $variable;
+// }
+
+// See Responsive breakpoint manager in _functions.scss for implementation.
+// Usage: 
+// .foo {
+//   @include respond-to('medium') {
+//     color: blue;
+//   }
+// }
+$breakpoints: (
+  'seed': (min-width: 800px),
+  'sprout': (min-width: 1000px),
+  'plant': (min-width: 1200px),
+);

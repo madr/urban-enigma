@@ -1,0 +1,15 @@
+# Based on the React EditorConfig file. See:
+# - http://editorconfig.org
+# - https://github.com/facebook/react/blob/master/.editorconfig
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{html,js,jsx,json,scss,yml}]
+indent_size = 2

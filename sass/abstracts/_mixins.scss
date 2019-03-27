@@ -1,0 +1,23 @@
+// The @extend directive is a powerful feature that is frequently misunderstood.
+// In general, it makes it possible to tell Sass to style a selector A as though
+// it also matched selector B. Needless to say, this can be a valuable ally when
+// writing modular CSS.
+
+// Always try to define relationships via selector placeholders, not actual
+// selectors. This will give you the freedom to use (and change) any naming
+// convention you have for your selectors, and since relationships are only
+// defined once inside the placeholders, you are far less likely to produce
+// unintended selectors.
+// %button {
+//  display: inline-block;
+//   … button styles
+
+//   Relationship: a %button that is a child of a %modal
+//   %modal > & {
+//     display: block;
+//   }
+// }
+
+// .button {
+//    @extend %button;
+// }

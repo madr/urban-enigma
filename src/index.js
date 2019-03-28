@@ -11,9 +11,15 @@ import rootReducer from './reducers'
 import '../sass/main.scss'
 
 const sagaMiddleware = createSagaMiddleware()
+
+/* eslint-disable no-underscore-dangle */
+const composeEnhancers =
+      window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+/* eslint-enable */
+
 const store = createStore(
   rootReducer,
-  applyMiddleware(sagaMiddleware)
+  composeEnhancers(applyMiddleware(sagaMiddleware)),
 )
 
 sagaMiddleware.run(rootSagas)

@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html ",
+    "start": "cross-env NODE_ENV=development parcel index.html assets/events.json",
     "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /"
   },
   "devDependencies": {

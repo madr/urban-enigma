@@ -4,8 +4,9 @@ import { LOAD_EVENTS, eventsLoadedOk } from '../actions'
 const EVENTS_URL = '/assets/events.json'
 
 export function* loadEventsAsync(action) {
+  const { source } = action.payload
   try {
-    const data = yield call(() => fetch(EVENTS_URL)
+    const data = yield call(() => fetch(source)
       .then(response => response.json())
       .then(data => data), {}
     )

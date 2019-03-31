@@ -1,11 +1,11 @@
 import React from 'react'
-import createSagaMiddleware from 'redux-saga'
 import { render } from 'react-dom'
-import { createStore, applyMiddleware } from 'redux'
+import { createStore, applyMiddleware, compose } from 'redux'
 import { Provider } from 'react-redux'
-import App from './components/App'
-import rootSagas from './sagas'
+import createSagaMiddleware from 'redux-saga'
+import App from './components/app'
 import rootReducer from './reducers'
+import rootSagas from './sagas'
 
 // Assets imported here, for Parcel to recognize Sass files.
 import '../sass/main.scss'
@@ -31,4 +31,8 @@ render(
   document.getElementById('app')
 )
 
-store.dispatch({ type: 'LOAD_EVENTS' })
+store.dispatch({
+  type: 'LOAD_EVENTS',
+  payload: {
+    source: 'assets/events.json'
+  }})

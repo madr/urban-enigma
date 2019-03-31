@@ -1,26 +1,27 @@
 [{
-  "type": "Festival",
+  "type": "festival",
   "title": "Gefle Metal Festival 2019",
   "venue": "Gasklockorna, Gävle",
-  "started_at": "2017-01-01",
-  "ended_at": "2017-01-02",
+  "startedAt": "2017-01-01",
+  "endedAt": "2017-01-02",
   "location": [],
   "bands": [],
   "missed": []
 },{
-  "type": "Konsert",
+  "type": "concert",
   "title": "Ecclesia Diabolica Evropa 2019",
   "venue": "Annexet, Stockholm",
-  "started_at": "2017-01-01",
+  "startedAt": "2017-01-01",
   "location": [],
   "band": "Behemoth",
-  "supports": ["At The Gates"]
+  "supports": ["At The Gates"],
+  "record": "I Loved You At Your Darkest"
 },{
-  "type": "Stadsfestival",
+  "type": "city_festival",
   "title": "House of Metal 2019",
   "venue": "Folkets hus, Umeå",
-  "started_at": "2017-01-01",
-  "ended_at": "2017-01-02",
+  "startedAt": "2017-01-01",
+  "endedAt": "2017-01-02",
   "location": [],
   "bands": ["At The Gates", "Tiamat", "LIK"],
   "missed": ["Taake"]

@@ -6,6 +6,7 @@ import createSagaMiddleware from 'redux-saga'
 import App from './components/app'
 import rootReducer from './reducers'
 import rootSagas from './sagas'
+import localStorageMiddleware, { reHydrateStore } from './storage'
 
 // Assets imported here, for Parcel to recognize Sass files.
 import '../sass/main.scss'
@@ -19,7 +20,13 @@ const composeEnhancers =
 
 const store = createStore(
   rootReducer,
-  composeEnhancers(applyMiddleware(sagaMiddleware)),
+  reHydrateStore(),
+  composeEnhancers(
+    applyMiddleware(
+      sagaMiddleware,
+      localStorageMiddleware
+    )
+  ),
 )
 
 sagaMiddleware.run(rootSagas)

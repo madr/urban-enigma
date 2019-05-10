@@ -8,7 +8,6 @@ const localStorageMiddleware = ({getState}) => {
   }
 }
 
-
 export const reHydrateStore = () => {
   if (localStorage.getItem(ITEM_NAME) !== null) {
     return JSON.parse(localStorage.getItem(ITEM_NAME))

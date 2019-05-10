@@ -1,0 +1,35 @@
+.form {
+  label {
+    display: block;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0.5rem;
+
+    label {
+      grid-column: 1;
+    }
+
+    input {
+      grid-column: 2;
+      margin-bottom: 0;
+    }
+
+    &-actions {
+      grid-column: 2;
+      text-align: right;
+    }
+  }
+}

@@ -1,7 +1,25 @@
-export const LOAD_EVENTS = 'LOAD_EVENTS'
-export const LOAD_EVENTS_OK = 'LOAD_EVENTS_OK'
+export const UPDATE_DRAFT = 'UPDATE_DRAFT'
+export const CREATE_SET = 'CREATE_SET'
+export const DROP_SET = 'DROP_SET'
 
-export const eventsLoadedOk = events => ({
-  type: LOAD_EVENTS_OK,
-  payload: events,
+export const updateDraft = (attr, value) => ({
+  type: UPDATE_DRAFT,
+  payload: {
+    attr,
+    value,
+  }
+})
+
+export const createSet = draft => ({
+  type: CREATE_SET,
+  payload: {
+    draft,
+  }
+})
+
+export const dropSet = id => ({
+  type: DROP_SET,
+  payload: {
+    id,
+  }
 })

@@ -24,7 +24,7 @@ const store = createStore(
   composeEnhancers(
     applyMiddleware(
       sagaMiddleware,
-      localStorageMiddleware
+      localStorageMiddleware,
     )
   ),
 )
@@ -37,9 +37,3 @@ render(
   </Provider>,
   document.getElementById('app')
 )
-
-store.dispatch({
-  type: 'LOAD_EVENTS',
-  payload: {
-    source: 'assets/events.json'
-  }})

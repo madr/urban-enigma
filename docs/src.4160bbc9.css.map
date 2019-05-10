@@ -1,1 +1,0 @@
-{"version":3,"sources":["sass/base/_reset.scss"],"names":[],"mappings":"AAAA;EACE,wBAAA;EACA,WAAA","file":"src.4160bbc9.css","sourceRoot":"..","sourcesContent":["html {\n  background-color: tomato;\n  color: #fff;\n}"]}

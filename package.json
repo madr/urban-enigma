@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel index.html assets/events.json --public-url /",
-    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /"
+    "build": "cross-env NODE_ENV=production parcel build index.html --no-minify --public-url /urban-enigma/"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

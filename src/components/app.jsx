@@ -1,13 +1,11 @@
 import React from 'react'
-import SetForm from '../containers/set-form';
-import SetList from '../containers/set-list';
-import Nav from '../components/nav';
+import FrontController from '../containers/frontcontroller';
+import Nav from '../containers/nav';
 
 const App = () => {
   return (
     <React.Fragment>
-      <SetForm />
-      <SetList />
+      <FrontController />
       <Nav />
     </React.Fragment>
   )

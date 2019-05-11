@@ -48,6 +48,9 @@ export default props => {
         min="2.5"
         max="300"
         step="2.5"
+        lang="en-150"
+        pattern="[0-9]*"
+        inputmode="decimal"
         value={weight}
         onChange={handleOnChange}
       />
@@ -58,6 +61,8 @@ export default props => {
         min="1"
         max="50"
         step="1"
+        pattern="[0-9]*"
+        inputmode="numeric"
         value={reps}
         onChange={handleOnChange}
       />
@@ -67,6 +72,8 @@ export default props => {
         type="range"
         min="1"
         max="5"
+        pattern="[0-9]*"
+        inputmode="numeric"
         value={rating}
         onChange={handleOnChange}
         step="1"

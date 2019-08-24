@@ -1,9 +1,10 @@
 import { UPDATE_DRAFT, CREATE_SET } from "../actions";
 import nanoid from "nanoid";
 
-const d2s = date => `${date.getYear()}-${date.getMonth()}-${date.getDate()}`;
+const d2s = date =>
+  `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
 
-const emptyDraft = () => ({
+export const emptyDraft = () => ({
   id: nanoid(),
   exercise: "",
   reps: 5,

@@ -1,6 +1,7 @@
 import { CREATE_SET } from "../actions";
 
-const INITIAL = [
+export const INITIAL = [
+  "Bicepscurls",
   "Bänkpress",
   "Chins",
   "Dips",
@@ -24,7 +25,7 @@ const INITIAL = [
 ];
 
 const saveNewExercise = (exercises, { exercise: value }) => {
-  if (exercises.map(s => s.toLowerCase()).indexOf(value) === -1) {
+  if (exercises.map(s => s.toLowerCase()).indexOf(value.toLowerCase()) === -1) {
     exercises = [...exercises, value];
   }
   return exercises;

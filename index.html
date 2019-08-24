@@ -1,11 +1,17 @@
 <html lang="sv">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>Baslyft, bärs &amp; burgare</title>
-</head>
-<body>
-  <div id="app" class="app"></div>
-  <script src="./src/index.jsx"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Baslyft, bärs &amp; burgare</title>
+    <link rel="manifest" href="/b3.webmanifest" />
+  </head>
+  <body>
+    <div id="app" class="app"></div>
+    <script src="./src/index.jsx"></script>
+    <script>
+      if (navigator.serviceWorker) {
+        navigator.serviceWorker.register("/serviceworker.js");
+      }
+    </script>
+  </body>
 </html>

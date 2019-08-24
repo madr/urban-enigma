@@ -1,0 +1,35 @@
+{
+    "name": "Baslyft, Bärs & Burgare",
+    "short_name": "B3",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "Log your workouts.",
+    "icons": [
+        {
+            "src": "assets/icon.svg",
+            "sizes": "48x48"
+        },
+        {
+            "src": "assets/icon.svg",
+            "sizes": "72x72"
+        },
+        {
+            "src": "assets/icon.svg",
+            "sizes": "96x96"
+        },
+        {
+            "src": "assets/icon.svg",
+            "sizes": "144x144"
+        },
+        {
+            "src": "assets/icon.svg",
+            "sizes": "168x168"
+        },
+        {
+            "src": "assets/icon.svg",
+            "sizes": "192x192"
+        }
+    ],
+    "related_applications": []
+}

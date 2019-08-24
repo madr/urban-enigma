@@ -1,5 +1,5 @@
 // Responsive breakpoint manager
-// Usage: 
+// Usage:
 // .foo {
 //   @include respond-to('medium') {
 //     color: blue;
@@ -10,7 +10,7 @@
 
   @if $raw-query {
     $query: if(
-      type-of($raw-query) == 'string',
+      type-of($raw-query) == "string",
       unquote($raw-query),
       inspect($raw-query)
     );

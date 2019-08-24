@@ -1,16 +1,16 @@
 //
-//    /$$ /$$$$$$$                      /$$                                                             /$$   
-//    /$$/| $$__  $$                    | $$                                                            |  $$  
-//   /$$/ | $$  \ $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$   /$$$$$$$  /$$$$$$        /$$$$$$/$$$$   /$$$$$$  \  $$ 
+//    /$$ /$$$$$$$                      /$$                                                             /$$
+//    /$$/| $$__  $$                    | $$                                                            |  $$
+//   /$$/ | $$  \ $$  /$$$$$$   /$$$$$$ | $$  /$$$$$$   /$$$$$$$  /$$$$$$        /$$$$$$/$$$$   /$$$$$$  \  $$
 //  /$$/  | $$$$$$$/ /$$__  $$ /$$__  $$| $$ |____  $$ /$$_____/ /$$__  $$      | $$_  $$_  $$ /$$__  $$  \  $$
 // |  $$  | $$__  $$| $$$$$$$$| $$  \ $$| $$  /$$$$$$$| $$      | $$$$$$$$      | $$ \ $$ \ $$| $$$$$$$$   /$$/
-//  \  $$ | $$  \ $$| $$_____/| $$  | $$| $$ /$$__  $$| $$      | $$_____/      | $$ | $$ | $$| $$_____/  /$$/ 
-//   \  $$| $$  | $$|  $$$$$$$| $$$$$$$/| $$|  $$$$$$$|  $$$$$$$|  $$$$$$$      | $$ | $$ | $$|  $$$$$$$ /$$/  
-//    \__/|__/  |__/ \_______/| $$____/ |__/ \_______/ \_______/ \_______/      |__/ |__/ |__/ \_______/|__/   
-//                            | $$                                                                             
-//                            | $$                                                                             
-//                            |__/                                                                             
-// ╔══════════════════════════════════════════════════════════════════════════╗ 
+//  \  $$ | $$  \ $$| $$_____/| $$  | $$| $$ /$$__  $$| $$      | $$_____/      | $$ | $$ | $$| $$_____/  /$$/
+//   \  $$| $$  | $$|  $$$$$$$| $$$$$$$/| $$|  $$$$$$$|  $$$$$$$|  $$$$$$$      | $$ | $$ | $$|  $$$$$$$ /$$/
+//    \__/|__/  |__/ \_______/| $$____/ |__/ \_______/ \_______/ \_______/      |__/ |__/ |__/ \_______/|__/
+//                            | $$
+//                            | $$
+//                            |__/
+// ╔══════════════════════════════════════════════════════════════════════════╗
 // ║ ASCII art:    http://www.patorjk.com/software/taag/                      ║
 // ║ 7-1 pattern:  https://sass-guidelin.es/#architecture                     ║
 // ║ KSS:          http://warpshire.com/kss/                                  ║
@@ -21,15 +21,12 @@
 // put in here.
 //   The rule of thumb for this folder is that it should not output a single
 // line of CSS when compiled on its own. These are nothing but Sass helpers.
-@import
-  'abstracts/variables',
-  'abstracts/functions',
-  'abstracts/mixins',
-  'abstracts/placeholders';
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins",
+  "abstracts/placeholders";
 
 // The vendors/ folder containing all the CSS files from external libraries
-// and frameworks – Normalize, Bootstrap, jQueryUI, and so on. 
-// @import 
+// and frameworks – Normalize, Bootstrap, jQueryUI, and so on.
+// @import
 //   'vendor/foo',
 //   'vendor/bar';
 
@@ -37,23 +34,20 @@
 // project. In there, you might find the reset file, some typographic rules,
 // and probably a stylesheet defining some standard styles for commonly used
 // HTML elements.
-@import
-  //'base/animations',
-  'base/reset',
+@import //'base/animations',
+    "base/reset",
   //'base/base',
-  'base/typography';
+    "base/typography";
 
 // The layout/ folder contains everything that takes part in laying out the
 // site or application. This folder could have stylesheets for the main parts
 // of the site (header, footer, navigation, sidebar…), the grid system or even
 // CSS styles for all the forms.
-@import
-  'layout/navigation',
-  'layout/grid',
+@import "layout/navigation", "layout/grid",
   //'layout/header',
-  //'layout/footer',
-  //'layout/sidebar',
-  'layout/forms';
+    //'layout/footer',
+    //'layout/sidebar',
+    "layout/forms";
 
 // For smaller components, there is the components/ folder. While layout/ is
 // macro (defining the global wireframe), components/ is more focused on
@@ -61,8 +55,7 @@
 // a widget, and basically anything along those lines. There are usually a lot
 // of files in components/ since the whole site/application should be mostly
 // composed of tiny modules.
-@import
-  'components/set-list';
+@import "components/set-list";
 
 // If you have page-specific styles, it is better to put them in a pages/
 // folder, in a file named after the page. For instance, it’s not uncommon to

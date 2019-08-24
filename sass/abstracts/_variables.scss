@@ -33,14 +33,20 @@
 // }
 
 // See Responsive breakpoint manager in _functions.scss for implementation.
-// Usage: 
+// Usage:
 // .foo {
 //   @include respond-to('medium') {
 //     color: blue;
 //   }
 // }
 $breakpoints: (
-  'seed': (min-width: 800px),
-  'sprout': (min-width: 1000px),
-  'plant': (min-width: 1200px),
+  "seed": (
+    min-width: 800px
+  ),
+  "sprout": (
+    min-width: 1000px
+  ),
+  "plant": (
+    min-width: 1200px
+  )
 );

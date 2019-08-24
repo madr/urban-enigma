@@ -1,10 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default props => {
-  const {
-    sets,
-    drop,
-  } = props
+  const { sets, drop } = props;
   return (
     <div className="sets">
       <table>
@@ -12,10 +9,9 @@ export default props => {
           {sets.map(set => (
             <tr key={set.id}>
               <td>
-                <button
-                  type="button"
-                  onClick={() => drop(set.id)}
-                >x</button>
+                <button type="button" onClick={() => drop(set.id)}>
+                  x
+                </button>
               </td>
               <td>{set.exercise}</td>
               <td>{set.weight}</td>
@@ -25,5 +21,5 @@ export default props => {
         </tbody>
       </table>
     </div>
-  )
-}
+  );
+};

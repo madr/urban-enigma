@@ -1,6 +1,6 @@
 import React from "react";
 import SetForm from "../containers/set-form";
-import SetList from "../containers/set-list";
+import WorkoutList from "../containers/workout-list";
 import OneRepMax from "../components/1rm";
 
 export default props => {
@@ -10,11 +10,10 @@ export default props => {
       {currentView === "new" && (
         <React.Fragment>
           <SetForm />
-          <SetList />
         </React.Fragment>
       )}
       {currentView === "1rm" && <OneRepMax />}
-      {currentView === "history" && <h1>logg</h1>}
+      {currentView === "history" && <WorkoutList />}
     </React.Fragment>
   );
 };

@@ -1,6 +1,6 @@
-import React from 'react'
-import FrontController from '../containers/frontcontroller';
-import Nav from '../containers/nav';
+import React from "react";
+import FrontController from "../containers/frontcontroller";
+import Nav from "../containers/nav";
 
 const App = () => {
   return (
@@ -8,7 +8,7 @@ const App = () => {
       <FrontController />
       <Nav />
     </React.Fragment>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -1,37 +1,24 @@
-import React from 'react'
+import React from "react";
 
 export default props => {
-  const {
-    draft,
-    updateDraft,
-    createSet,
-    exercises,
-  } = props
-  const {
-    exercise,
-    reps,
-    rating,
-    weight,
-  } = draft
+  const { draft, updateDraft, createSet, exercises } = props;
+  const { exercise, reps, rating, weight } = draft;
   const handleOnChange = evt => {
-    const { id: attr, value } = evt.target
-    updateDraft(attr, value)
-  }
+    const { id: attr, value } = evt.target;
+    updateDraft(attr, value);
+  };
   const handleOnSubmit = evt => {
-    evt.preventDefault()
+    evt.preventDefault();
     if (!!draft.exercise) {
-      createSet(draft)
+      createSet(draft);
     }
-  }
+  };
   return (
-    <form
-      className="form"
-      onSubmit={handleOnSubmit}
-      method="post"
-      action=""
-    >
+    <form className="form" onSubmit={handleOnSubmit} method="post" action="">
       <datalist id="exercises">
-        {exercises.map(exercise => <option key={exercise}>{exercise}</option>)}
+        {exercises.map(exercise => (
+          <option key={exercise}>{exercise}</option>
+        ))}
       </datalist>
       <label htmlFor="reps">Övning</label>
       <input
@@ -50,7 +37,7 @@ export default props => {
         step="2.5"
         lang="en-150"
         pattern="[0-9]*"
-        inputmode="decimal"
+        inputMode="decimal"
         value={weight}
         onChange={handleOnChange}
       />
@@ -62,7 +49,7 @@ export default props => {
         max="50"
         step="1"
         pattern="[0-9]*"
-        inputmode="numeric"
+        inputMode="numeric"
         value={reps}
         onChange={handleOnChange}
       />
@@ -73,7 +60,7 @@ export default props => {
         min="1"
         max="5"
         pattern="[0-9]*"
-        inputmode="numeric"
+        inputMode="numeric"
         value={rating}
         onChange={handleOnChange}
         step="1"
@@ -82,5 +69,5 @@ export default props => {
         <button type="submit">Spara</button>
       </div>
     </form>
-  )
-}
+  );
+};

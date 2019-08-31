@@ -2,15 +2,25 @@ import React from "react";
 import { RATING_MAX } from "../constants";
 
 export default props => {
-  const { exercise, rating, reps, weight } = props;
+  const { exercise, sets } = props;
   return (
-    <tr>
-      <th>{exercise}</th>
-      <td>{reps}</td>
-      <td>{weight}kg</td>
-      <td>
-        {rating}/{RATING_MAX}
-      </td>
-    </tr>
+    <React.Fragment>
+      <tr>
+        <th colspan="3">{exercise}</th>
+      </tr>
+      {sets.map(set => (
+        <tr>
+          <td>
+            <big>{set.reps}</big> reps
+          </td>
+          <td>
+            <big>{set.weight}</big> kg
+          </td>
+          <td>
+            <big>{set.rating}</big>/{RATING_MAX}
+          </td>
+        </tr>
+      ))}
+    </React.Fragment>
   );
 };

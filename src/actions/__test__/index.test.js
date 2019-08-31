@@ -67,4 +67,19 @@ describe("action creators", () => {
       expect(action).toEqual(expected);
     });
   });
+
+  describe("CREATE_WORKOUT", () => {
+    it("uses a name and doneAt as payload", () => {
+      const doneAt = "2016-06-06";
+      const name = "get going";
+      const expected = {
+        type: actions.CREATE_WORKOUT,
+        payload: { name, doneAt }
+      };
+
+      const action = actions.createWorkout(name, doneAt);
+
+      expect(action).toEqual(expected);
+    });
+  });
 });

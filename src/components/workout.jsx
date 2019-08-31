@@ -18,7 +18,9 @@ export default props => {
       }}
       open={sets.length}
     >
-      <summary>{doneAt}</summary>
+      <summary>
+        {name} <small>({doneAt})</small>
+      </summary>
       <SetStats sets={sets} />
       <table>
         <tbody>{sets && sets.map(st => <Set key={st.id} {...st} />)}</tbody>

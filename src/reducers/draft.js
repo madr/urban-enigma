@@ -1,8 +1,6 @@
 import { UPDATE_DRAFT, CREATE_SET } from "../actions";
 import nanoid from "nanoid";
-
-const d2s = date =>
-  `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
+import d2s from "../helpers/d2s";
 
 export const emptyDraft = () => ({
   id: nanoid(),

@@ -1,4 +1,4 @@
-const created = 'Sat Aug 31 2019 18:37:46 GMT+0200 (Västeuropa, sommartid)';
+const created = 'Sat Aug 31 2019 23:14:27 GMT+0200 (Västeuropa, sommartid)';
 const caches = ['/assets\\index.html','/assets\\src.6ebfba02.js','/assets\\src.6ebfba02.css','/urban-enigma/index.html'];
 const cacheName = 'undefined-85aefe28';
 const offlineUrl = '/urban-enigma/index.html';

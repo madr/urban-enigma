@@ -1,1 +1,11 @@
-{"lang":"sv","name":"Baslyft, Bärs & Burgare","short_name":"B3","display":"standalone","start_url":"/","background_color":"#000","theme_color":"#000","icons":[{"src":"icon.bac3c665.svg","sizes":"300x300","type":"image/svg"}]}
+{
+    "lang": "sv",
+    "name": "Baslyft, Bärs & Burgare",
+    "short_name": "B3",
+    "start_url": "/urban-enigma/",
+    "background_color": "#000",
+    "theme_color": "#000",
+    "icons": [
+        { "src": "icon.83aa3da3.png", "sizes": "512x512", "type": "image/png" }
+    ]
+}

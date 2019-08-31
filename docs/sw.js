@@ -1,7 +1,7 @@
-const created = 'Sat Aug 31 2019 17:55:34 GMT+0200 (Västeuropa, sommartid)';
-const caches = ['/assets\\index.html','/assets\\icon.bac3c665.svg','/assets\\src.6ebfba02.js','/assets\\src.6ebfba02.css','/index.html'];
-const cacheName = 'undefined-d04b3891';
-const offlineUrl = '/index.html';
+const created = 'Sat Aug 31 2019 18:37:46 GMT+0200 (Västeuropa, sommartid)';
+const caches = ['/assets\\index.html','/assets\\src.6ebfba02.js','/assets\\src.6ebfba02.css','/urban-enigma/index.html'];
+const cacheName = 'undefined-85aefe28';
+const offlineUrl = '/urban-enigma/index.html';
 
 self.addEventListener('install', function(e) {
   e.waitUntil(caches.open(cacheName).then(function(cache) {

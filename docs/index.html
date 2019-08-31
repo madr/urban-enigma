@@ -1,12 +1,18 @@
 <html lang="sv">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
     <title>Baslyft, bärs &amp; burgare</title>
-    <link rel="manifest" href="/b3.webmanifest">
-  <link rel="stylesheet" href="/src.6ebfba02.css"></head>
+    <link rel="manifest" href="/urban-enigma/b3.webmanifest" />
+    <link rel="stylesheet" href="/urban-enigma/src.6ebfba02.css" />
+  </head>
   <body>
     <div id="app"></div>
-    <script src="/src.6ebfba02.js"></script>
+    <script src="/urban-enigma/src.6ebfba02.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/urban-enigma/sw.js");
+      }
+    </script>
   </body>
 </html>

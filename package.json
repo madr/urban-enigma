@@ -49,7 +49,7 @@
       "html"
     ],
     "additional": [],
-    "offlineUrl": "/index.html",
+    "offlineUrl": "/urban-enigma/index.html",
     "fileName": "sw.js",
     "outDir": "./docs"
   }

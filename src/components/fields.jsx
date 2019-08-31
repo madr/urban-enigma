@@ -10,7 +10,7 @@ export const ExerciseField = props => {
           <option key={exercise}>{exercise}</option>
         ))}
       </datalist>
-      <label htmlFor="reps">Övning</label>
+      <label htmlFor="exercise">Övning</label>
       <input
         id="exercise"
         list="exercises"

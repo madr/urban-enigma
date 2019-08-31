@@ -5,6 +5,10 @@ nav {
   left: 0;
   display: flex;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 0.33rem;
   background-color: #444;
+
+  button {
+    padding: 0.5rem;
+  }
 }

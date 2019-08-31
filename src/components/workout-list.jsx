@@ -5,7 +5,7 @@ export default props => {
   const { workouts } = props;
   return (
     <React.Fragment>
-      <h1>Workouts</h1>
+      <h1>Träningspass</h1>
       {workouts.map(workout => (
         <Workout key={workout.doneAt} {...workout} />
       ))}

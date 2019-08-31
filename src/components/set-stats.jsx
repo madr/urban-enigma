@@ -11,10 +11,13 @@ export default props => {
   return (
     <ul>
       <li>
-        <b>{mass}</b> ton lyftes
+        <b>{mass}</b> ton
       </li>
       <li>
-        <b>{reps}</b> repetitioner utfördes
+        <b>{sets.length}</b> set
+      </li>
+      <li>
+        <b>{reps}</b> repetitioner
       </li>
     </ul>
   );

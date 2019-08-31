@@ -82,7 +82,7 @@ export const WeightField = props => {
         type="number"
         min="2.5"
         max="300"
-        step="2.5"
+        step="0.5"
         lang="en-150"
         pattern="[0-9]*"
         inputMode="decimal"

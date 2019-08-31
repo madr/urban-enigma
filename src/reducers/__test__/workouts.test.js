@@ -1,5 +1,5 @@
 import reducer from "../workouts";
-import { createSet } from "../../actions";
+import { createSet, createWorkout } from "../../actions";
 
 describe("workouts", () => {
   it("returns initial state", () => {
@@ -8,7 +8,7 @@ describe("workouts", () => {
     expect(initialState).toEqual([]);
   });
 
-  it("creates workout whgen set is created", () => {
+  it("creates workout when set is created and no workout is present", () => {
     const workout1 = { dummy: "data" };
     const doneAt = "dummy-date";
     const set = { also: "dummy-data", doneAt };
@@ -19,5 +19,17 @@ describe("workouts", () => {
 
     expect(newState.length).toBe(2);
     expect(newState[1].doneAt).toBe(doneAt);
+  });
+
+  it("creates a new workout with a name", () => {
+    const name = "presspasset";
+    const doneAt = "2006-06-06";
+    const currentState = [];
+
+    const action = createWorkout(name, doneAt);
+    const newState = reducer(currentState, action);
+
+    expect(newState.length).toBe(1);
+    expect(newState[0]).toEqual({ name, doneAt });
   });
 });

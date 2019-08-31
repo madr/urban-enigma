@@ -1,6 +1,5 @@
 import React from "react";
-import { RATING_MIN, RATING_MAX, RATING_STEPS } from "../constants";
-import { RepsField, WeightField } from "./fields";
+import { ExerciseField, RatingField, RepsField, WeightField } from "./fields";
 
 export default props => {
   const { draft, updateDraft, createSet, exercises } = props;
@@ -20,33 +19,14 @@ export default props => {
 
   return (
     <form className="form" onSubmit={handleOnSubmit} method="post" action="">
-      <datalist id="exercises">
-        {exercises.map(exercise => (
-          <option key={exercise}>{exercise}</option>
-        ))}
-      </datalist>
-      <label htmlFor="reps">Övning</label>
-      <input
-        id="exercise"
-        list="exercises"
-        autoComplete="off"
+      <ExerciseField
         value={exercise}
-        onChange={handleOnChange}
+        choices={exercises}
+        handleOnChange={handleOnChange}
       />
-      <WeightField weight={weight} handleOnChange={handleOnChange} />
-      <RepsField reps={reps} handleOnChange={handleOnChange} />
-      <label htmlFor="rating">Hur gick det?</label>
-      <input
-        id="rating"
-        type="range"
-        min={RATING_MIN}
-        max={RATING_MAX}
-        pattern="[0-9]*"
-        inputMode="numeric"
-        value={rating}
-        onChange={handleOnChange}
-        step={RATING_STEPS}
-      />
+      <WeightField value={weight} handleOnChange={handleOnChange} />
+      <RepsField value={reps} handleOnChange={handleOnChange} />
+      <RatingField value={rating} handleOnChange={handleOnChange} />
       <div className="form-actions">
         <button type="submit">Spara</button>
       </div>

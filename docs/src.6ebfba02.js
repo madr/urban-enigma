@@ -31894,7 +31894,7 @@ var _default = function _default(props) {
     return acc + (0, _parseInt2.default)(st.reps, 10);
   }, 0);
   var mass = sets.reduce(function (acc, st) {
-    return acc + (0, _parseFloat2.default)(st.weight, 10);
+    return acc + (0, _parseFloat2.default)(st.weight, 10) * (0, _parseInt2.default)(st.reps, 10);
   }, 0) / 1000;
   return _react.default.createElement("ul", null, _react.default.createElement("li", null, _react.default.createElement("b", null, mass), " ton lyftes"), _react.default.createElement("li", null, _react.default.createElement("b", null, reps), " repetitioner utf\xF6rdes"));
 };
@@ -33409,7 +33409,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.emptyDraft = void 0;
 
-var _objectSpread2 = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectSpread"));
+var _objectSpread = _interopRequireDefault(require("@babel/runtime-corejs2/helpers/objectSpread"));
 
 var _actions = require("../actions");
 
@@ -33445,7 +33445,7 @@ var _default = function _default() {
           value = _action$payload.value;
       var changeset = {};
       changeset[attr] = value;
-      return (0, _objectSpread2.default)({}, currentState, changeset);
+      return (0, _objectSpread.default)({}, currentState, {}, changeset);
 
     case _actions.CREATE_SET:
       return emptyDraft();
@@ -35167,7 +35167,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54894" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51617" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

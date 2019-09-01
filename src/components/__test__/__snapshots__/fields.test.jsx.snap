@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExerciseField renders correctly 1`] = `
+Array [
+  <datalist
+    id="exercises"
+  >
+    <option>
+      Bänkpress
+    </option>
+    <option>
+      Marklyft
+    </option>
+    <option>
+      Knäböj
+    </option>
+  </datalist>,
+  <label
+    htmlFor="exercise"
+  >
+    Övning
+  </label>,
+  <input
+    autoComplete="off"
+    id="exercise"
+    list="exercises"
+    onChange={[Function]}
+    value="Bänkpress"
+  />,
+]
+`;
+
+exports[`NameField renders correctly 1`] = `
+Array [
+  <label
+    htmlFor="name"
+  >
+    Döp passet
+  </label>,
+  <input
+    id="name"
+    onChange={[Function]}
+    type="text"
+    value="Bänkpress Boogie 1.1"
+  />,
+]
+`;
+
+exports[`RatingField renders correctly 1`] = `
+Array [
+  <label
+    htmlFor="rating"
+  >
+    Hur gick det?
+  </label>,
+  <input
+    id="rating"
+    inputMode="numeric"
+    max={5}
+    min={1}
+    onChange={[Function]}
+    pattern="[0-9]*"
+    step={1}
+    type="range"
+    value={3}
+  />,
+]
+`;
+
+exports[`RepsField renders correctly 1`] = `
+Array [
+  <label
+    htmlFor="reps"
+  >
+    Repetitioner
+  </label>,
+  <input
+    id="reps"
+    inputMode="numeric"
+    max="50"
+    min="1"
+    onChange={[Function]}
+    pattern="[0-9]*"
+    step="1"
+    type="number"
+    value={5}
+  />,
+]
+`;
+
+exports[`WeightField renders correctly 1`] = `
+Array [
+  <label
+    htmlFor="weight"
+  >
+    Vikt
+  </label>,
+  <input
+    id="weight"
+    inputMode="decimal"
+    lang="en-150"
+    max="300"
+    min="2.5"
+    onChange={[Function]}
+    pattern="[0-9]*"
+    step="0.5"
+    type="number"
+    value={100}
+  />,
+]
+`;

@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<ul>
+  <li>
+    <b>
+      1.14
+    </b>
+     ton
+  </li>
+  <li>
+    <b>
+      2
+    </b>
+     set
+  </li>
+  <li>
+    <b>
+      13
+    </b>
+     repetitioner
+  </li>
+</ul>
+`;

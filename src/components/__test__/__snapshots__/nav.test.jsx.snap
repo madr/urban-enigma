@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  id="nav"
+>
+  <button
+    onClick={[Function]}
+    title="Historik"
+  >
+    📆
+  </button>
+  <button
+    onClick={[Function]}
+    title="Logga pass"
+  >
+    ➕
+  </button>
+  <button
+    onClick={[Function]}
+    title="Kalkylator för 1rm"
+  >
+    1RM
+  </button>
+</nav>
+`;

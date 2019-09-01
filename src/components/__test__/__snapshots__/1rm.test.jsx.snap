@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <h1>
+    Beräkna 1RM
+  </h1>,
+  <p>
+    <a
+      href="https://www.vcalc.com/wiki/vCalc/Epley+Formula+%281+rep+max%29"
+    >
+      Epleys formula for 1rm
+    </a>
+  </p>,
+  <form
+    action=""
+    className="form"
+    method="post"
+    onInput={[Function]}
+  >
+    <label
+      htmlFor="weight"
+    >
+      Vikt
+    </label>
+    <input
+      id="weight"
+      inputMode="decimal"
+      lang="en-150"
+      max="300"
+      min="2.5"
+      onChange={[Function]}
+      pattern="[0-9]*"
+      step="0.5"
+      type="number"
+    />
+    <label
+      htmlFor="reps"
+    >
+      Repetitioner
+    </label>
+    <input
+      id="reps"
+      inputMode="numeric"
+      max="50"
+      min="1"
+      onChange={[Function]}
+      pattern="[0-9]*"
+      step="1"
+      type="number"
+    />
+    <output
+      htmlFor="weight reps"
+      id="1rm"
+    />
+  </form>,
+]
+`;

@@ -20,7 +20,7 @@ nature in mind:
 - ✅ Keep discovering [React together with Redux][5].
 - ✅ Make [LocalStorage][6] and [Redux-sagas][7] work together for
   offline-first with server sync.
-- ⚪ Setup and implement React-stacked PWA testing using [Jest][8]
+- ✅ Setup and implement React-stacked PWA testing using [Jest][8]
   (with snapshots) and [Enzyme][9].
 
 ## Roadmap

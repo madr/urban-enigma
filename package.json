@@ -2,7 +2,8 @@
   "scripts": {
     "start": "cross-env NODE_ENV=development parcel index.html --public-url / --out-dir _build",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url /urban-enigma/ --out-dir docs --no-source-maps --no-content-hash",
-    "test": "cross-env NODE_ENV=jest TZ='UTC' jest --watch --passWithNoTests"
+    "test": "cross-env NODE_ENV=jest TZ='UTC' jest --passWithNoTests",
+    "test-watch": "cross-env NODE_ENV=jest TZ='UTC' jest --watch --passWithNoTests"
   },
   "devDependencies": {
     "@babel/core": "^7.4.0",

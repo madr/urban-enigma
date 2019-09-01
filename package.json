@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "cross-env NODE_ENV=development parcel index.html --public-url / --out-dir docs",
+    "start": "cross-env NODE_ENV=development parcel index.html --public-url / --out-dir _build",
     "build": "cross-env NODE_ENV=production parcel build index.html --public-url /urban-enigma/ --out-dir docs --no-source-maps --no-content-hash",
     "test": "cross-env NODE_ENV=jest TZ='UTC' jest --watch --passWithNoTests"
   },
@@ -12,10 +12,13 @@
     "autoprefixer": "^9.5.0",
     "babel-jest": "^24.9.0",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "jest": "^24.9.0",
     "parcel-bundler": "^1.12.3",
-    "parcel-plugin-precaching-sw": "0.0.3",
-    "react-test-renderer": "^16.9.0",
+    "parcel-plugin-workbox": "git+https://madr@github.com/madr/parcel-plugin-workbox.git",
+    "react-test-renderer": "^16.8.6",
+    "redux-mock-store": "^1.5.3",
     "sass": "^1.17.3"
   },
   "dependencies": {
@@ -40,17 +43,7 @@
       }
     }
   },
-  "precachingSW": {
-    "bypass": false,
-    "allowed": [
-      "js",
-      "css",
-      "svg",
-      "html"
-    ],
-    "additional": [],
-    "offlineUrl": "/urban-enigma/index.html",
-    "fileName": "sw.js",
-    "outDir": "./docs"
+  "workbox": {
+    "importScripts": []
   }
 }

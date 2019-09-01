@@ -6,8 +6,9 @@ export default props => {
 
   const handleOnSubmit = evt => {
     evt.preventDefault();
-    const field = document.getElementById("name");
-    createWorkout(field.value, d2s(new Date()));
+    const name = evt.target[0].value;
+    const doneAt = d2s(new Date());
+    createWorkout(name, doneAt);
     field.value = "";
   };
 

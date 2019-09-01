@@ -11,10 +11,18 @@ export default _props => {
     }
   };
   return (
-    <form className="form" onInput={calculate} method="post" action="">
-      <WeightField handleOnChange={() => {}} />
-      <RepsField handleOnChange={() => {}} />
-      <output id="1rm" htmlFor="weight reps" />
-    </form>
+    <React.Fragment>
+      <h1>Beräkna 1RM</h1>
+      <p>
+        <a href="https://www.vcalc.com/wiki/vCalc/Epley+Formula+%281+rep+max%29">
+          Epleys formula for 1rm
+        </a>
+      </p>
+      <form className="form" onInput={calculate} method="post" action="">
+        <WeightField handleOnChange={() => {}} />
+        <RepsField handleOnChange={() => {}} />
+        <output id="1rm" htmlFor="weight reps" />
+      </form>
+    </React.Fragment>
   );
 };

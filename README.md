@@ -1,7 +1,5 @@
 # urban-enigma
 
-[![Build Status](https://travis-ci.org/madr/urban-enigma.svg?branch=master)](https://travis-ci.org/madr/urban-enigma)
-
 Workout companion PWA, offline first: all data is stored on the
 device.
 

@@ -6,10 +6,10 @@ export default props => {
   return (
     <React.Fragment>
       <tr>
-        <th colspan="3">{exercise}</th>
+        <th colSpan="3">{exercise}</th>
       </tr>
       {sets.map(set => (
-        <tr>
+        <tr key={set.id}>
           <td>
             <big>{set.reps}</big> reps
           </td>

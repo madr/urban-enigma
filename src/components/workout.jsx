@@ -23,7 +23,6 @@ export default props => {
     }
   };
   const groupedSets = groupByExercise(sets);
-  console.log(groupedSets);
   return (
     <details
       onToggle={evt => {

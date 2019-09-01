@@ -8,19 +8,17 @@ the metric system: kilograms (kg) and tons (1000 kg).
 
 ## Goals
 
-**Goal completion: 6/7** 🔥
-
 Written with the following personal goals and challenges of technical
 nature in mind:
 
-- ✅ Building something [offline-first][1].
-- ✅ Get to know the [Parcel bundler][2].
-- ✅ Get in line according to [Prettier formatter][3].
-- ✅ Continous progression in the [7-1 Sass guidelines][4].
-- ✅ Keep discovering [React together with Redux][5].
-- ✅ Make [LocalStorage][6] and [Redux-sagas][7] work together for
+- Building something [offline-first][1].
+- Get to know the [Parcel bundler][2].
+- Get in line according to [Prettier formatter][3].
+- Continous progression in the [7-1 Sass guidelines][4].
+- Keep discovering [React together with Redux][5].
+- Make [LocalStorage][6] and [Redux-sagas][7] work together for
   offline-first with server sync.
-- ✅ Setup and implement React-stacked PWA testing using [Jest][8]
+- Setup and implement React-stacked PWA testing using [Jest][8]
   (with snapshots) and [Enzyme][9].
 
 ## Roadmap

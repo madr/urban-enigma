@@ -45,5 +45,10 @@
   },
   "workbox": {
     "importScripts": []
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./setup-tests.js"
+    ]
   }
 }

@@ -1,15 +1,19 @@
 {
   "lang": "sv",
   "name": "Baslyft, Bärs & Burgare",
-  "short_name": "B3",
+  "short_name": "Urban Enigma",
   "start_url": "/urban-enigma/",
   "background_color": "#066",
   "theme_color": "#066",
+  "display": "standalone",
   "icons": [
     {
       "src": "icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "serviceworker": {
+    "src": "./sw.js"
+  }
 }

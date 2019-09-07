@@ -22,12 +22,13 @@ Starting the Jest test watcher is highly recommended.
 
     $> npm test
 
-Use `npm run test-once` to run tests once.
+Use `npm run test-once` to run tests once, and `npm run lint`
+to check formatting (using vanilla Prettier.io).
 
 ## How to contribute
 
 Contributions are most welcome! Feel free to create an issue 
-describing your idea, or start a Pull request here on Github.
+describing your idea, or start a Pull Request here on Github.
 
 Please make sure that **the following requirements** are met
 with your changes:
@@ -35,10 +36,13 @@ with your changes:
  * Green tests.
  * Code is formatted using Prettier.
 
+Use `npm run test-once` and `npm run lint` to check the above
+requirements.
+
 ## Goals
 
-Written with the following personal goals and challenges of technical
-nature in mind:
+Written with the following personal goals and challenges of 
+technical nature in mind:
 
 - Building something [offline-first][1].
 - Get to know the [Parcel bundler][2].

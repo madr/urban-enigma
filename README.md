@@ -8,6 +8,33 @@ device.
 The app interface language is swedish. All weights are presented in
 the metric system: kilograms (kg) and tons (1000 kg).
 
+## Getting started
+
+Install all dependencies using NPM, and start the Parcel bundler and
+development web server.
+
+    $> npm i
+    $> npm start
+
+Site is now running at http://localhost:1234.
+
+Starting the Jest test watcher is highly recommended.
+
+    $> npm test
+
+Use `npm run test-once` to run tests once.
+
+## How to contribute
+
+Contributions are most welcome! Feel free to create an issue 
+describing your idea, or start a Pull request here on Github.
+
+Please make sure that **the following requirements** are met
+with your changes:
+
+ * Green tests.
+ * Code is formatted using Prettier.
+
 ## Goals
 
 Written with the following personal goals and challenges of technical
@@ -22,34 +49,6 @@ nature in mind:
   offline-first with server sync.
 - Setup and implement React-stacked PWA testing using [Jest][8]
   (with snapshots) and [Enzyme][9].
-
-## Roadmap
-
-### Minimum lovable product
-
-- Fully functional offline experience.
-- Handheld as favoured device.
-- Basic workout history: date, exercises, total reps,
-  total sets.
-- Useful formulas (Epleys 1RM calculator et cetera)
-
-### Nice to haves
-
-_Technical:_
-
-- More CRUD
-- Gorgeous design
-- Responsive design (include desktop and tablets)
-- Opt-in backend sync
-- More tests
-
-_Functional:_
-
-- More stats
-- Track PRs
-- Edit sets
-- Remove sets
-- Smart auto-completion
 
 [1]: http://offlinefirst.org/
 [2]: https://parceljs.org/

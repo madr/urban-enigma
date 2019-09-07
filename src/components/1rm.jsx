@@ -12,12 +12,14 @@ export default _props => {
   };
   return (
     <React.Fragment>
-      <h1>Beräkna 1RM</h1>
-      <p>
-        <a href="https://www.vcalc.com/wiki/vCalc/Epley+Formula+%281+rep+max%29">
-          Epleys formula for 1rm
-        </a>
-      </p>
+      <div className="flex--space-between">
+        <h1>Beräkna 1RM</h1>
+        <p>
+          <a href="https://www.vcalc.com/wiki/vCalc/Epley+Formula+%281+rep+max%29">
+            Epleys 1RM formula
+          </a>
+        </p>
+      </div>
       <form className="form" onInput={calculate} method="post" action="">
         <WeightField handleOnChange={() => {}} />
         <RepsField handleOnChange={() => {}} />

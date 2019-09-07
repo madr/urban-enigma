@@ -77,7 +77,6 @@ Array [
   <input
     id="reps"
     inputMode="numeric"
-    max="50"
     min="1"
     onChange={[Function]}
     pattern="[0-9]*"
@@ -99,7 +98,6 @@ Array [
     id="weight"
     inputMode="decimal"
     lang="en-150"
-    max="300"
     min="2.5"
     onChange={[Function]}
     pattern="[0-9]*"

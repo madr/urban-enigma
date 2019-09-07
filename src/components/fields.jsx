@@ -61,7 +61,6 @@ export const RepsField = props => {
         id="reps"
         type="number"
         min="1"
-        max="50"
         step="1"
         pattern="[0-9]*"
         inputMode="numeric"
@@ -81,7 +80,6 @@ export const WeightField = props => {
         id="weight"
         type="number"
         min="2.5"
-        max="300"
         step="0.5"
         lang="en-150"
         pattern="[0-9]*"
@@ -90,5 +88,15 @@ export const WeightField = props => {
         onChange={handleOnChange}
       />
     </React.Fragment>
+  );
+};
+
+export const WeightRepsFields = props => {
+  const { handleOnChange, reps, weight } = props;
+  return (
+    <fieldset>
+      <WeightField value={weight} handleOnChange={handleOnChange} />
+      <RepsField value={reps} handleOnChange={handleOnChange} />
+    </fieldset>
   );
 };

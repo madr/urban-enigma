@@ -1,5 +1,5 @@
 import React from "react";
-import { ExerciseField, RatingField, RepsField, WeightField } from "./fields";
+import { ExerciseField, RatingField, WeightRepsFields } from "./fields";
 
 export default props => {
   const { draft, updateDraft, createSet, exercises } = props;
@@ -24,8 +24,11 @@ export default props => {
         choices={exercises}
         handleOnChange={handleOnChange}
       />
-      <WeightField value={weight} handleOnChange={handleOnChange} />
-      <RepsField value={reps} handleOnChange={handleOnChange} />
+      <WeightRepsFields
+        reps={reps}
+        weight={weight}
+        handleOnChange={handleOnChange}
+      />
       <RatingField value={rating} handleOnChange={handleOnChange} />
       <div className="form-actions">
         <button type="submit">Spara</button>

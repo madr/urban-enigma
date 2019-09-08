@@ -8,7 +8,8 @@ export const emptyDraft = () => ({
   reps: 5,
   rating: 3,
   weight: 20,
-  doneAt: d2s(new Date())
+  doneAt: d2s(new Date()),
+  isWarmup: false
 });
 
 export default (currentState = emptyDraft(), action) => {

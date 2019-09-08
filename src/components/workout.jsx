@@ -4,11 +4,11 @@ import SetStats from "./set-stats";
 
 const groupByExercise = sets =>
   sets.reduce((acc, set) => {
-    const { exercise, weight, reps, rating, id } = set;
+    const { exercise } = set;
     if (!acc[exercise]) {
-      acc[exercise] = [{ weight, reps, rating, id }];
+      acc[exercise] = [set];
     } else {
-      acc[exercise] = [...acc[exercise], { weight, reps, rating, id }];
+      acc[exercise] = [...acc[exercise], set];
     }
     return acc;
   }, {});

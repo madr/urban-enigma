@@ -1,6 +1,15 @@
 @mixin border-color($hex) {
-  border-color: lighten(#696, 15) darken(#696, 15) darken(#696, 15)
-    lighten(#696, 15);
+  border-color: lighten($hex, 15) darken($hex, 15) darken($hex, 15)
+    lighten($hex, 15);
+}
+
+@mixin block($hex) {
+  background-color: $hex;
+  color: #fff;
+  border-radius: 0;
+  border: 3px solid $hex;
+  @include border-color($hex);
+  outline: 1px solid #000;
 }
 
 label {
@@ -91,12 +100,7 @@ button {
   padding: 0.3em;
   font-size: 1.5rem;
   font-family: monaco, consolas, menlo, "Courier New", Courier, monospace;
-  background-color: #585;
-  color: #fff;
-  border-radius: 0;
-  border: 3px solid #585;
-  @include border-color(#585);
-  outline: 1px solid #000;
+  @include block(#585);
 
   &:hover,
   &:focus {
@@ -142,4 +146,9 @@ fieldset {
   input {
     width: auto;
   }
+}
+
+summary {
+  padding: 0.5em;
+  @include block(#585);
 }

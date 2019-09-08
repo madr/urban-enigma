@@ -9,7 +9,7 @@ export default props => {
         <th colSpan="3">{exercise}</th>
       </tr>
       {sets.map(set => (
-        <tr key={set.id}>
+        <tr key={set.id} className={set.isWarmup ? "warmup" : ""}>
           <td>
             <big>{set.reps}</big> reps
           </td>

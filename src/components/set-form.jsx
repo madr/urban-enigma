@@ -6,8 +6,12 @@ export default props => {
   const { exercise, reps, rating, weight } = draft;
 
   const handleOnChange = evt => {
-    const { id: attr, value } = evt.target;
-    updateDraft(attr, value);
+    const { id: attr, value, checked, type } = evt.target;
+    if (type === "checkbox") {
+      updateDraft(attr, checked);
+    } else {
+      updateDraft(attr, value);
+    }
   };
 
   const handleOnSubmit = evt => {

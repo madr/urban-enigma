@@ -9,7 +9,9 @@ Array [
       Press
     </th>
   </tr>,
-  <tr>
+  <tr
+    className=""
+  >
     <td>
       <big>
         5
@@ -30,7 +32,9 @@ Array [
       5
     </td>
   </tr>,
-  <tr>
+  <tr
+    className=""
+  >
     <td>
       <big>
         5
@@ -51,7 +55,9 @@ Array [
       5
     </td>
   </tr>,
-  <tr>
+  <tr
+    className=""
+  >
     <td>
       <big>
         5

@@ -30,6 +30,22 @@ Array [
 ]
 `;
 
+exports[`IsWarmupField renders correctly 1`] = `
+<label
+  class="label--checkbox"
+  htmlFor="isWarmup"
+>
+  <input
+    checked={true}
+    id="isWarmup"
+    onChange={[Function]}
+    type="checkbox"
+    value={false}
+  />
+  Uppvärmningsset
+</label>
+`;
+
 exports[`NameField renders correctly 1`] = `
 Array [
   <label

@@ -1,9 +1,14 @@
 import React from "react";
-import { ExerciseField, RatingField, WeightRepsFields } from "./fields";
+import {
+  ExerciseField,
+  RatingField,
+  WeightRepsFields,
+  IsWarmupField
+} from "./fields";
 
 export default props => {
   const { draft, updateDraft, createSet, exercises } = props;
-  const { exercise, reps, rating, weight } = draft;
+  const { exercise, reps, rating, weight, isWarmpup } = draft;
 
   const handleOnChange = evt => {
     const { id: attr, value, checked, type } = evt.target;
@@ -33,6 +38,7 @@ export default props => {
         weight={weight}
         handleOnChange={handleOnChange}
       />
+      <IsWarmupField value={isWarmpup} handleOnChange={handleOnChange} />
       <RatingField value={rating} handleOnChange={handleOnChange} />
       <div className="form-actions">
         <button type="submit">Spara</button>

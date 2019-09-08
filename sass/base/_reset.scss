@@ -1,6 +1,15 @@
 html {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  //font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  //  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: monaco, consolas, menlo, "Courier New", Courier, monospace;
   color: #444;
-  background-color: #f1f1f1;
+  background-color: #fff;
+}
+
+body {
+  padding: 0.5em;
+}
+
+* {
+  box-sizing: border-box;
 }

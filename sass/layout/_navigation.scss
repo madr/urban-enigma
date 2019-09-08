@@ -4,11 +4,12 @@ nav {
   bottom: 0;
   left: 0;
   display: flex;
+  padding: 0.5em;
   justify-content: space-between;
-  padding: 0.33rem;
   background-color: #444;
 
   button {
+    margin: 0;
     padding: 0.5rem;
   }
 }

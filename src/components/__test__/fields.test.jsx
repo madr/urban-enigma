@@ -5,7 +5,8 @@ import {
   NameField,
   RatingField,
   RepsField,
-  WeightField
+  WeightField,
+  IsWarmupField,
 } from "../fields";
 
 describe("ExerciseField", () => {
@@ -15,7 +16,7 @@ describe("ExerciseField", () => {
         <ExerciseField
           value={"Bänkpress"}
           choices={["Bänkpress", "Marklyft", "Knäböj"]}
-          handleOnChange={() => {}}
+          handleOnChange={() => { }}
         />
       )
       .toJSON();
@@ -28,7 +29,7 @@ describe("NameField", () => {
   it("renders correctly", () => {
     const tree = renderer
       .create(
-        <NameField value={"Bänkpress Boogie 1.1"} handleOnChange={() => {}} />
+        <NameField value={"Bänkpress Boogie 1.1"} handleOnChange={() => { }} />
       )
       .toJSON();
 
@@ -39,7 +40,7 @@ describe("NameField", () => {
 describe("RatingField", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<RatingField value={3} handleOnChange={() => {}} />)
+      .create(<RatingField value={3} handleOnChange={() => { }} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -49,7 +50,7 @@ describe("RatingField", () => {
 describe("RepsField", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<RepsField value={5} handleOnChange={() => {}} />)
+      .create(<RepsField value={5} handleOnChange={() => { }} />)
       .toJSON();
 
     expect(tree).toMatchSnapshot();
@@ -59,7 +60,19 @@ describe("RepsField", () => {
 describe("WeightField", () => {
   it("renders correctly", () => {
     const tree = renderer
-      .create(<WeightField value={100} handleOnChange={() => {}} />)
+      .create(<WeightField value={100} handleOnChange={() => { }} />)
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+});
+
+describe("IsWarmupField", () => {
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(
+        <IsWarmupField value={true} handleOnChange={() => { }} />
+      )
       .toJSON();
 
     expect(tree).toMatchSnapshot();

@@ -91,6 +91,22 @@ export const WeightField = props => {
   );
 };
 
+export const IsWarmupField = props => {
+  const { handleOnChange, value } = props;
+  return (
+    <label class="label--checkbox" htmlFor="isWarmup">
+      <input
+        type="checkbox"
+        onChange={handleOnChange}
+        checked={value}
+        value={false}
+        id="isWarmup"
+      />
+      Uppvärmningsset
+    </label>
+  );
+};
+
 export const WeightRepsFields = props => {
   const { handleOnChange, reps, weight } = props;
   return (

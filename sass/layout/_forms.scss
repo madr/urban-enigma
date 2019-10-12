@@ -98,7 +98,7 @@ button {
   width: 90%;
   margin: 0.5em auto;
   padding: 0.3em;
-  font-size: 1.5rem;
+  font-size: 1.25em;
   font-family: monaco, consolas, menlo, "Courier New", Courier, monospace;
   @include block(#585);
 
@@ -117,7 +117,7 @@ button {
 }
 
 output {
-  font-size: 2.5rem;
+  font-size: 2.5em;
   line-height: 3;
   text-align: center;
 }

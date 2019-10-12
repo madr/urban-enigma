@@ -1,5 +1,5 @@
 import reducer, { emptyDraft } from "../draft";
-import { updateDraft, createSet } from "../../actions";
+import { updateDraft, createSet, createWorkout } from "../../actions";
 
 describe("drafts", () => {
   it("returns initial state", () => {
@@ -35,6 +35,20 @@ describe("drafts", () => {
       const newState = reducer(currentState, action);
 
       expect(newState.exercise).toEqual(exercise);
+    });
+  });
+
+  describe("new workout", () => {
+    it("returns empty draft when a workout is created", () => {
+      const currentState = { throw: "away" };
+      const expected = emptyDraft();
+      delete expected.id
+
+      const action = createWorkout("Leg day!", '2019-09-11');
+      const newState = reducer(currentState, action);
+      delete newState.id
+
+      expect(newState).toEqual(expected);
     });
   });
 });

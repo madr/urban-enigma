@@ -1,4 +1,4 @@
-import { UPDATE_DRAFT, CREATE_SET } from "../actions";
+import { UPDATE_DRAFT, CREATE_SET, CREATE_WORKOUT } from "../actions";
 import nanoid from "nanoid";
 import d2s from "../helpers/d2s";
 
@@ -23,6 +23,8 @@ export default (currentState = emptyDraft(), action) => {
         ...changeset
       };
     case CREATE_SET:
+      return emptyDraft();
+    case CREATE_WORKOUT:
       return emptyDraft();
     default:
       return currentState;

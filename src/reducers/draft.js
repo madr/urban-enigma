@@ -5,9 +5,9 @@ import d2s from "../helpers/d2s";
 export const emptyDraft = () => ({
   id: nanoid(),
   exercise: "",
-  reps: 5,
+  reps: 0,
   rating: 3,
-  weight: 20,
+  weight: 0,
   doneAt: d2s(new Date()),
   isWarmup: false
 });

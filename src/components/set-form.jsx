@@ -39,7 +39,6 @@ export default props => {
         handleOnChange={handleOnChange}
       />
       <IsWarmupField value={isWarmpup} handleOnChange={handleOnChange} />
-      <RatingField value={rating} handleOnChange={handleOnChange} />
       <div className="form-actions">
         <button type="submit">Spara</button>
       </div>

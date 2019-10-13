@@ -2,7 +2,7 @@ import React from "react";
 import Set from "./set";
 import SetStats from "./set-stats";
 
-const groupByExercise = sets =>
+export const groupByExercise = sets =>
   sets.reduce((acc, set) => {
     const { exercise } = set;
     if (!acc[exercise]) {

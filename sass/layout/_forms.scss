@@ -12,17 +12,21 @@
   outline: 1px solid #000;
 }
 
+form {
+  padding: 0.5em;
+}
+
 label {
-  margin-top: 1em;
   display: block;
 }
 
 input {
   display: block;
   width: 100%;
-  font-family: monaco, consolas, menlo, "Courier New", Courier, monospace;
-  margin-bottom: 0.5em;
-  font-size: 2em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin-bottom: 1em;
+  font-size: 1em;
   padding: 0.33em;
   border: 0;
   border-bottom: 3px solid #aaa;
@@ -35,6 +39,7 @@ input:focus {
 input[type="checkbox"] {
   height: 1.5em;
   width: 1.5em;
+  margin-bottom: 0;
 }
 
 input[type="range"] {
@@ -97,22 +102,25 @@ button {
   display: block;
   width: 90%;
   margin: 0.5em auto;
-  padding: 0.3em;
+  padding: 0.5em;
   font-size: 1.25em;
-  font-family: monaco, consolas, menlo, "Courier New", Courier, monospace;
-  @include block(#585);
+  background-color: #444;
+  color: #fff;
+  border: 3px solid #000;
+  border-width: 0 0 3px;
+  border-radius: 4px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   &:hover,
   &:focus {
-    background-color: #696;
-    @include border-color(#696);
+    background-color: #111;
   }
 
   &:active {
-    background-color: #363;
+    background-color: #000;
     border-width: 3px 0 0;
-    border-color: darken(#363, 15);
-    transform: translateY(2px);
+    border-color: #000;
   }
 }
 
@@ -122,7 +130,7 @@ output {
   text-align: center;
 }
 
-fieldset {
+.fieldset {
   border: 0;
   padding: 0;
   display: grid;
@@ -139,18 +147,13 @@ fieldset {
 }
 
 .label--checkbox {
-  margin: 0.4em 0;
+  margin: 0 0 1em;
   display: flex;
   align-items: center;
 
   input {
     width: auto;
   }
-}
-
-summary {
-  padding: 0.5em;
-  @include block(#585);
 }
 
 .button--inline {

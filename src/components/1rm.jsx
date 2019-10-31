@@ -21,8 +21,10 @@ export default _props => {
         </p>
       </div>
       <form className="form" onInput={calculate} method="post" action="">
-        <WeightField handleOnChange={() => {}} />
-        <RepsField handleOnChange={() => {}} />
+        <div className="fieldset">
+          <WeightField handleOnChange={() => {}} />
+          <RepsField handleOnChange={() => {}} />
+        </div>
         <output id="1rm" htmlFor="weight reps" />
       </form>
     </React.Fragment>

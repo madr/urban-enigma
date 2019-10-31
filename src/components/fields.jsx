@@ -110,9 +110,9 @@ export const IsWarmupField = props => {
 export const WeightRepsFields = props => {
   const { handleOnChange, reps, weight } = props;
   return (
-    <fieldset>
+    <div className="fieldset">
       <WeightField value={weight} handleOnChange={handleOnChange} />
       <RepsField value={reps} handleOnChange={handleOnChange} />
-    </fieldset>
+    </div>
   );
 };

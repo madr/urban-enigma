@@ -10,7 +10,7 @@ export default props => {
   return (
     <React.Fragment>
       <h1 hidden>Träningspass</h1>
-      {ongoingWorkout && (
+      {ongoingWorkout && ongoing.length && (
         <table>
           <tbody>
             {Object.entries(ongoing).map(([exercise, sets]) => (

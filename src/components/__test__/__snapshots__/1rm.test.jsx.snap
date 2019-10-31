@@ -22,35 +22,39 @@ Array [
     method="post"
     onInput={[Function]}
   >
-    <label
-      htmlFor="weight"
+    <div
+      className="fieldset"
     >
-      Vikt
-    </label>
-    <input
-      id="weight"
-      inputMode="decimal"
-      lang="en-150"
-      min="2.5"
-      onChange={[Function]}
-      pattern="[0-9]*"
-      step="0.5"
-      type="number"
-    />
-    <label
-      htmlFor="reps"
-    >
-      Repetitioner
-    </label>
-    <input
-      id="reps"
-      inputMode="numeric"
-      min="1"
-      onChange={[Function]}
-      pattern="[0-9]*"
-      step="1"
-      type="number"
-    />
+      <label
+        htmlFor="weight"
+      >
+        Vikt
+      </label>
+      <input
+        id="weight"
+        inputMode="decimal"
+        lang="en-150"
+        min="2.5"
+        onChange={[Function]}
+        pattern="[0-9]*"
+        step="0.5"
+        type="number"
+      />
+      <label
+        htmlFor="reps"
+      >
+        Repetitioner
+      </label>
+      <input
+        id="reps"
+        inputMode="numeric"
+        min="1"
+        onChange={[Function]}
+        pattern="[0-9]*"
+        step="1"
+        type="number"
+      />
+    </div>
     <output
       htmlFor="weight reps"
       id="1rm"

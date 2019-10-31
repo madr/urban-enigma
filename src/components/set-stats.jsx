@@ -17,7 +17,7 @@ export default props => {
         <b>{sets.length}</b> set
       </li>
       <li>
-        <b>{reps}</b> repetitioner
+        <b>{reps}</b> reps
       </li>
     </ul>
   );

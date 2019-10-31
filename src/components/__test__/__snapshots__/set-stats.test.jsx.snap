@@ -18,7 +18,7 @@ exports[`renders correctly 1`] = `
     <b>
       13
     </b>
-     repetitioner
+     reps
   </li>
 </ul>
 `;

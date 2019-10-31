@@ -3,10 +3,15 @@
 exports[`renders correctly 1`] = `
 Array [
   <tr>
-    <th
-      colSpan="3"
-    >
+    <th>
       Press
+    </th>
+    <th>
+      70
+       kg 
+      <small>
+        1rm
+      </small>
     </th>
   </tr>,
   <tr
@@ -24,13 +29,6 @@ Array [
       </big>
        kg
     </td>
-    <td>
-      <big>
-        4
-      </big>
-      /
-      5
-    </td>
   </tr>,
   <tr
     className=""
@@ -47,13 +45,6 @@ Array [
       </big>
        kg
     </td>
-    <td>
-      <big>
-        5
-      </big>
-      /
-      5
-    </td>
   </tr>,
   <tr
     className=""
@@ -69,13 +60,6 @@ Array [
         60
       </big>
        kg
-    </td>
-    <td>
-      <big>
-        3
-      </big>
-      /
-      5
     </td>
   </tr>,
 ]

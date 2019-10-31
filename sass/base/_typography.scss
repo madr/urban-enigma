@@ -12,22 +12,44 @@ table {
 
 th {
   text-align: left;
-  padding: 1.25em 0.25em 0.25em;
+  padding: 1.25em 0.5em 0.25em;
 }
 
 td {
-  border: 2px solid #888;
-  padding: 0.25em;
+  padding: 0.25em 0.5em;
 
   .warmup & {
-    color: #aaa;
+    color: #777;
+    font-style: italic;
+  }
+}
+
+td:last-child,
+th:last-child {
+  text-align: right;
+}
+
+tr:nth-child(even) {
+  td {
+    background-color: #f2f2f2;
   }
 }
 
 ul {
-  padding-left: 0;
+  padding: 0.5em;
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+summary {
+  padding: 1em 0.5em;
+  background-color: #222;
+  background-image: linear-gradient(#222, #111);
+  color: #fff;
+
+  [open] & {
+    background: #111;
+  }
 }

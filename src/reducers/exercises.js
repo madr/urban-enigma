@@ -24,8 +24,15 @@ export const INITIAL = [
   "Utfall"
 ];
 
+const slugify = s => s.toLowerCase();
+
+const reorderExercises = (exercises, exercise) => [
+  exercise,
+  ...exercises.filter(e => slugify(e) !== slugify(exercise))
+];
+
 const saveNewExercise = (exercises, { exercise: value }) => {
-  if (exercises.map(s => s.toLowerCase()).indexOf(value.toLowerCase()) === -1) {
+  if (exercises.map(s => slugify(s)).indexOf(slugify(value)) === -1) {
     exercises = [...exercises, value];
   }
   return exercises;
@@ -34,7 +41,10 @@ const saveNewExercise = (exercises, { exercise: value }) => {
 export default (currentState = INITIAL, action) => {
   switch (action.type) {
     case CREATE_SET:
-      return saveNewExercise(currentState, action.payload.draft);
+      return reorderExercises(
+        saveNewExercise(currentState, action.payload.draft),
+        slugify(action.payload.draft.exercise)
+      );
     default:
       return currentState;
   }

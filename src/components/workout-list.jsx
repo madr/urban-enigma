@@ -13,7 +13,7 @@ export default props => {
         <h1>Träningspass</h1>
       </header>
       <main>
-        {ongoingWorkout && ongoing && (
+        {ongoingWorkout.length !== 0 && (
           <table>
             <tbody>
               {Object.entries(ongoing).map(([exercise, sets]) => (

@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  <header>
+    <h1>
+      Slaskn
+    </h1>
+  </header>,
+  <main>
+    <div
+      className="legend flex--space-between"
+    >
+      <h1>
+        Beräkna 1RM
+      </h1>
+      <p>
+        <a
+          href="https://www.vcalc.com/wiki/vCalc/Epley+Formula+%281+rep+max%29"
+        >
+          Epleys 1RM formula
+        </a>
+      </p>
+    </div>
+    <form
+      action=""
+      className="form oneRmForm flex--space-between"
+      method="post"
+      onInput={[Function]}
+    >
+      <div
+        className="fieldset"
+      >
+        <label
+          htmlFor="weight"
+        >
+          Vikt
+        </label>
+        <input
+          id="weight"
+          inputMode="decimal"
+          lang="en-150"
+          min="2.5"
+          onChange={[Function]}
+          pattern="[0-9]*"
+          step="0.5"
+          type="number"
+        />
+        <label
+          htmlFor="reps"
+        >
+          Repetitioner
+        </label>
+        <input
+          id="reps"
+          inputMode="numeric"
+          min="1"
+          onChange={[Function]}
+          pattern="[0-9]*"
+          step="1"
+          type="number"
+        />
+      </div>
+      <output
+        htmlFor="weight reps"
+      />
+    </form>
+    <div
+      className="legend flex--space-between"
+    >
+      <h1>
+        Lbs till Kg
+      </h1>
+      <p>
+        <a
+          href="https://sv.wikipedia.org/wiki/Pund_(viktenhet)"
+        >
+          Pund (viktenhet)
+        </a>
+      </p>
+    </div>
+    <form
+      action=""
+      className="form oneRmForm flex--space-between"
+      method="post"
+      onInput={[Function]}
+    >
+      <div
+        className="fieldset"
+      >
+        <label
+          htmlFor="weight"
+        >
+          Vikt
+        </label>
+        <input
+          id="weight"
+          inputMode="decimal"
+          lang="en-150"
+          min="2.5"
+          onChange={[Function]}
+          pattern="[0-9]*"
+          step="0.5"
+          type="number"
+        />
+      </div>
+      <output
+        htmlFor="weight"
+      />
+    </form>
+  </main>,
+]
+`;

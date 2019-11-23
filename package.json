@@ -53,6 +53,12 @@
   "jest": {
     "setupFilesAfterEnv": [
       "./setup-tests.js"
-    ]
-  }
+    ],
+    "moduleNameMapper": {
+      "^[./a-zA-Z0-9$_-]+\\.svg$": "<rootDir>/.test-dummy-image.js"
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import renderer from "react-test-renderer";
-import OneRM from "../1rm";
+import Formulas from "../formulas";
 
 it("renders correctly", () => {
-  const tree = renderer.create(<OneRM />).toJSON();
+  const tree = renderer.create(<Formulas />).toJSON();
 
   expect(tree).toMatchSnapshot();
 });

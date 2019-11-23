@@ -6,21 +6,27 @@ exports[`renders correctly 1`] = `
 >
   <button
     onClick={[Function]}
-    title="Historik"
   >
-    📆
+    <img
+      alt="Historik"
+      src="1px.gif"
+    />
   </button>
   <button
     onClick={[Function]}
-    title="Logga pass"
   >
-    ➕
+    <img
+      alt="Logga träning"
+      src="1px.gif"
+    />
   </button>
   <button
     onClick={[Function]}
-    title="Kalkylator för 1rm"
   >
-    1RM
+    <img
+      alt="Slaskn"
+      src="1px.gif"
+    />
   </button>
 </nav>
 `;

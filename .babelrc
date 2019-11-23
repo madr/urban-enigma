@@ -1,16 +1,16 @@
 {
-    "env": {
-        "jest": {
-            "presets": [
-                [
-                    "@babel/preset-env",
-                    {
-                        "modules": "commonjs"
-                    }
-                ]
-            ]
-        }
-    },
-    "presets": ["@babel/preset-react"],
-    "plugins": [["@babel/plugin-transform-runtime", { "corejs": 2 }]]
+  "env": {
+    "jest": {
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
+    }
+  },
+  "presets": ["@babel/preset-react"],
+  "plugins": [["@babel/plugin-transform-runtime", { "corejs": 2 }]]
 }

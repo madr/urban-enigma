@@ -40,7 +40,6 @@ exports[`IsWarmupField renders correctly 1`] = `
     id="isWarmup"
     onChange={[Function]}
     type="checkbox"
-    value={false}
   />
   Uppvärmningsset
 </label>

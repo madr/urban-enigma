@@ -1,10 +1,12 @@
 import { connect } from "react-redux";
 import SetForm from "../components/set-form";
 import { updateDraft, createSet } from "../actions";
+import d2s from "../helpers/d2s";
 
 const mapStateToProps = state => ({
   draft: state.draft,
-  exercises: state.exercises
+  exercises: state.exercises,
+  setCount: state.sets.filter(s => s.doneAt === d2s(new Date())).length
 });
 
 const mapDispatchToProps = dispatch => ({

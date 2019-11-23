@@ -13,9 +13,9 @@ let changeset = {};
 export const emptyDraft = () => ({
   id: nanoid(),
   exercise: "",
-  reps: 0,
+  reps: "",
   rating: 3,
-  weight: 0,
+  weight: "",
   doneAt: d2s(new Date()),
   isWarmup: false
 });

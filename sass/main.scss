@@ -43,9 +43,8 @@
 // site or application. This folder could have stylesheets for the main parts
 // of the site (header, footer, navigation, sidebar…), the grid system or even
 // CSS styles for all the forms.
-@import "layout/navigation", "layout/grid",
-  //'layout/header',
-    //'layout/footer',
+@import "layout/navigation", "layout/grid", "layout/header",
+  //'layout/footer',
     //'layout/sidebar',
     "layout/forms";
 

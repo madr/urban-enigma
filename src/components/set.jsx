@@ -15,16 +15,18 @@ export default props => {
           {orm} kg <small>1rm</small>
         </th>
       </tr>
-      {sets.map(set => (
-        <tr key={set.id} className={set.isWarmup ? "warmup" : ""}>
-          <td>
-            <big>{set.reps}</big> reps
-          </td>
-          <td>
-            <big>{set.weight}</big> kg
-          </td>
-        </tr>
-      ))}
+      {sets
+        .sort((a, b) => a.isWarmup < b.isWarmup)
+        .map(set => (
+          <tr key={set.id} className={set.isWarmup ? "warmup" : ""}>
+            <td>
+              <big>{set.reps}</big> reps
+            </td>
+            <td>
+              <big>{set.weight}</big> kg
+            </td>
+          </tr>
+        ))}
     </React.Fragment>
   );
 };

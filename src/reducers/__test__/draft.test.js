@@ -1,7 +1,7 @@
 import reducer, { emptyDraft } from "../draft";
 import {
   updateDraft,
-  copyDraft,
+  pasteDraft,
   createSet,
   createWorkout
 } from "../../actions";
@@ -64,12 +64,11 @@ describe("drafts", () => {
         exercise: "skriva kod",
         weight: 111,
         reps: 6,
-        doneAt: "2006-06-06",
         isWarmup: true
       };
       const expected = { ...currentState, ...values };
 
-      const action = copyDraft(values);
+      const action = pasteDraft(values);
       const newState = reducer(currentState, action);
 
       expect(newState).toEqual(expected);
@@ -78,12 +77,11 @@ describe("drafts", () => {
     it("imports a partial set to draft", () => {
       const currentState = emptyDraft();
       const values = {
-        exercise: "skriva kod",
-        doneAt: "2006-06-06"
+        exercise: "skriva kod"
       };
       const expected = { ...currentState, ...values };
 
-      const action = copyDraft(values);
+      const action = pasteDraft(values);
       const newState = reducer(currentState, action);
 
       expect(newState).toEqual(expected);

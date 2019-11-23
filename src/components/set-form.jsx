@@ -1,5 +1,6 @@
 import React from "react";
 import { ExerciseField, WeightRepsFields, IsWarmupField } from "./fields";
+import PasteSet from "../containers/paste-set";
 import saveIcon from "../../svg/floppy-disk.svg";
 
 export default props => {
@@ -26,9 +27,12 @@ export default props => {
     <React.Fragment>
       <header>
         <h1>Lägg till set #{setCount + 1}</h1>
-        <button type="submit" form="new-set">
-          <img src={saveIcon} alt="Spara" />
-        </button>
+        <span>
+          <PasteSet />
+          <button type="submit" form="new-set">
+            <img src={saveIcon} alt="Spara" />
+          </button>
+        </span>
       </header>
       <main>
         <form

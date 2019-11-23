@@ -1,6 +1,6 @@
 import {
   UPDATE_DRAFT,
-  COPY_DRAFT,
+  PASTE_DRAFT,
   CREATE_SET,
   CREATE_WORKOUT
 } from "../actions";
@@ -34,7 +34,7 @@ export default (currentState = emptyDraft(), action) => {
       return emptyDraft();
     case CREATE_WORKOUT:
       return emptyDraft();
-    case COPY_DRAFT:
+    case PASTE_DRAFT:
       changeset = {};
       KEYS.forEach(k => {
         const value = action.payload[k];

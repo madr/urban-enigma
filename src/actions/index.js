@@ -5,15 +5,14 @@ export const DROP_SET = "DROP_SET";
 export const SET_CURRENT_VIEW = "SET_CURRENT_VIEW";
 export const COLLAPSE_WORKOUT = "COLLAPSE_WORKOUT";
 export const FOLD_WORKOUT = "FOLD_WORKOUT";
-export const COPY_DRAFT = "COPY_DRAFT";
+export const PASTE_DRAFT = "PASTE_DRAFT";
 
-export const copyDraft = ({ exercise, weight, reps, doneAt, isWarmup }) => ({
-  type: COPY_DRAFT,
+export const pasteDraft = ({ exercise, weight, reps, isWarmup }) => ({
+  type: PASTE_DRAFT,
   payload: {
     exercise,
     weight,
     reps,
-    doneAt,
     isWarmup
   }
 });

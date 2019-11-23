@@ -82,4 +82,45 @@ describe("action creators", () => {
       expect(action).toEqual(expected);
     });
   });
+
+  describe("PASTE_DRAFT", () => {
+    it("copy a set-like object", () => {
+      const exercise = "skriver kod";
+      const weight = 111;
+      const reps = 6;
+      const isWarmup = true;
+      const expected = {
+        type: actions.PASTE_DRAFT,
+        payload: { exercise, weight, reps, isWarmup }
+      };
+
+      const action = actions.pasteDraft({ exercise, weight, reps, isWarmup });
+
+      expect(action).toEqual(expected);
+    });
+
+    it("omits doneAt and ids", () => {
+      const exercise = "skriver kod";
+      const weight = 111;
+      const reps = 6;
+      const isWarmup = true;
+      const id = "oh no!";
+      const doneAt = "before the creation of time";
+      const expected = {
+        type: actions.PASTE_DRAFT,
+        payload: { exercise, weight, reps, isWarmup }
+      };
+
+      const action = actions.pasteDraft({
+        exercise,
+        weight,
+        reps,
+        isWarmup,
+        id,
+        doneAt
+      });
+
+      expect(action).toEqual(expected);
+    });
+  });
 });

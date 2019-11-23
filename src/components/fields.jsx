@@ -99,7 +99,6 @@ export const IsWarmupField = props => {
         type="checkbox"
         onChange={handleOnChange}
         checked={value}
-        value={false}
         id="isWarmup"
       />
       Uppvärmningsset

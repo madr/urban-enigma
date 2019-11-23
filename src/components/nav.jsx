@@ -1,17 +1,20 @@
 import React from "react";
+import bookIcon from "../../svg/book.svg";
+import bullhornIcon from "../../svg/bullhorn.svg";
+import labIcon from "../../svg/lab.svg";
 
 export default props => {
   const { goto } = props;
   return (
     <nav id="nav">
-      <button title="Historik" onClick={() => goto("history")}>
-        📆
+      <button onClick={() => goto("history")}>
+        <img src={bookIcon} alt="Historik" />
       </button>
-      <button title="Logga pass" onClick={() => goto("new")}>
-        ➕
+      <button onClick={() => goto("new")}>
+        <img src={bullhornIcon} alt="Logga träning" />
       </button>
-      <button title="Kalkylator för 1rm" onClick={() => goto("1rm")}>
-        1RM
+      <button onClick={() => goto("1rm")}>
+        <img src={labIcon} alt="Slaskn" />
       </button>
     </nav>
   );

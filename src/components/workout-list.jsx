@@ -1,7 +1,6 @@
 import React from "react";
 import Set from "./set";
 import Workout from "../containers/workout";
-import d2s from "../helpers/d2s";
 import { groupByExercise } from "./workout";
 
 export default props => {

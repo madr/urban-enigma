@@ -3,8 +3,10 @@ import OneRm from "../helpers/1rm";
 
 export default props => {
   const { exercise, sets } = props;
-  const orm = sets.reduce((acc, o) => Math.max(OneRm(o.weight, o.reps)), 0);
-  console.log(orm);
+  const orm = sets.reduce(
+    (acc, o) => Math.max(OneRm(o.weight, o.reps), acc),
+    0
+  );
   return (
     <React.Fragment>
       <tr>

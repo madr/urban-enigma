@@ -13,14 +13,23 @@ export default props => {
   };
 
   return (
-    <form className="form" onSubmit={handleOnSubmit} method="post" action="">
-      <div>
-        <label htmlFor="name">Döp passet</label>
-        <input id="name" type="text" />
-      </div>
-      <div className="form-actions">
-        <button type="submit">Starta pass</button>
-      </div>
-    </form>
+    <React.Fragment>
+      <header>
+        <h1>Starta pass</h1>
+      </header>
+      <main>
+        <form
+          className="form"
+          onSubmit={handleOnSubmit}
+          method="post"
+          action=""
+        >
+          <div>
+            <label htmlFor="name">Döp passet</label>
+            <input id="name" type="text" />
+          </div>
+        </form>
+      </main>
+    </React.Fragment>
   );
 };

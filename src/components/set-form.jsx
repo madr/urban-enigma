@@ -1,14 +1,10 @@
 import React from "react";
-import {
-  ExerciseField,
-  RatingField,
-  WeightRepsFields,
-  IsWarmupField
-} from "./fields";
+import { ExerciseField, WeightRepsFields, IsWarmupField } from "./fields";
+import saveIcon from "../../svg/floppy-disk.svg";
 
 export default props => {
-  const { draft, updateDraft, createSet, exercises } = props;
-  const { exercise, reps, rating, weight, isWarmpup } = draft;
+  const { draft, updateDraft, createSet, exercises, setCount } = props;
+  const { exercise, reps, weight, isWarmup } = draft;
 
   const handleOnChange = evt => {
     const { id: attr, value, checked, type } = evt.target;
@@ -27,21 +23,33 @@ export default props => {
   };
 
   return (
-    <form className="form" onSubmit={handleOnSubmit} method="post" action="">
-      <ExerciseField
-        value={exercise}
-        choices={exercises}
-        handleOnChange={handleOnChange}
-      />
-      <WeightRepsFields
-        reps={reps}
-        weight={weight}
-        handleOnChange={handleOnChange}
-      />
-      <IsWarmupField value={isWarmpup} handleOnChange={handleOnChange} />
-      <div className="form-actions">
-        <button type="submit">Spara</button>
-      </div>
-    </form>
+    <React.Fragment>
+      <header>
+        <h1>Lägg till set #{setCount + 1}</h1>
+        <button type="button" onClick={handleOnSubmit}>
+          <img src={saveIcon} alt="Spara" />
+        </button>
+      </header>
+      <main>
+        <form
+          className="form"
+          onSubmit={handleOnSubmit}
+          method="post"
+          action=""
+        >
+          <ExerciseField
+            value={exercise}
+            choices={exercises}
+            handleOnChange={handleOnChange}
+          />
+          <WeightRepsFields
+            reps={reps}
+            weight={weight}
+            handleOnChange={handleOnChange}
+          />
+          <IsWarmupField value={isWarmup} handleOnChange={handleOnChange} />
+        </form>
+      </main>
+    </React.Fragment>
   );
 };

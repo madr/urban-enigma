@@ -1,7 +1,7 @@
 import React from "react";
 import CreateForm from "../containers/create-form";
 import Workouts from "../containers/workout-list";
-import OneRepMax from "../components/1rm";
+import OneRepMax from "./formulas";
 
 export default props => {
   const { currentView } = props;

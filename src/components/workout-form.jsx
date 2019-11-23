@@ -1,5 +1,6 @@
 import React from "react";
 import d2s from "../helpers/d2s";
+import checkIcon from "../../svg/checkmark.svg";
 
 export default props => {
   const { createWorkout } = props;
@@ -16,9 +17,13 @@ export default props => {
     <React.Fragment>
       <header>
         <h1>Starta pass</h1>
+        <button type="submit" form="new-workout">
+          <img src={checkIcon} alt="Kör!" />
+        </button>
       </header>
       <main>
         <form
+          id="new-workout"
           className="form"
           onSubmit={handleOnSubmit}
           method="post"

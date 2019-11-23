@@ -26,12 +26,13 @@ export default props => {
     <React.Fragment>
       <header>
         <h1>Lägg till set #{setCount + 1}</h1>
-        <button type="button" onClick={handleOnSubmit}>
+        <button type="submit" form="new-set">
           <img src={saveIcon} alt="Spara" />
         </button>
       </header>
       <main>
         <form
+          id="new-set"
           className="form"
           onSubmit={handleOnSubmit}
           method="post"

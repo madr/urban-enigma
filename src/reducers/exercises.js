@@ -43,7 +43,7 @@ export default (currentState = INITIAL, action) => {
     case CREATE_SET:
       return reorderExercises(
         saveNewExercise(currentState, action.payload.draft),
-        slugify(action.payload.draft.exercise)
+        action.payload.draft.exercise
       );
     default:
       return currentState;

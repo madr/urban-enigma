@@ -29,16 +29,6 @@ describe("currentView", () => {
       expect(newState).toEqual(expected);
     });
 
-    it("skipping duplicates case sensitively", () => {
-      const currentState = ["a", "d"];
-      const expected = ["d", "a"];
-
-      const action = createSet({ exercise: "D" });
-      const newState = reducer(currentState, action);
-
-      expect(newState).toEqual(expected);
-    });
-
     it("prepend the most recent exercise to list", () => {
       const currentState = ["a", "b", "c", "d", "e"];
       const expected = ["c", "a", "b", "d", "e"];
@@ -51,6 +41,16 @@ describe("currentView", () => {
 
       expect(newState).toEqual(expected);
       expect(anotherNewState).toEqual(alsoExpected);
+    });
+
+    it("keeps exercise formatting intact", () => {
+      const currentState = ["Koda", "Headbanga"];
+      const expected = ["Headbanga", "Koda"];
+
+      const action = createSet({ exercise: "Headbanga" });
+      const newState = reducer(currentState, action);
+
+      expect(newState).toEqual(expected);
     });
   });
 });

@@ -16,7 +16,7 @@ export default props => {
         </th>
       </tr>
       {sets
-        .sort((a, b) => (a.isWarmup < b.isWarmup ? 1 : -1))
+        .sort((a, b) => (a.isWarmup < b.isWarmup ? 1 : 0))
         .map(set => (
           <tr key={set.id} className={set.isWarmup ? "warmup" : ""}>
             <td>

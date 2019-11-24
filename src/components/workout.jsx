@@ -31,7 +31,9 @@ export default props => {
       open={sets.length}
     >
       <summary>
-        {name} <small>({doneAt})</small>
+        <span>
+          {name} <small>{doneAt}</small>
+        </span>
       </summary>
       <SetStats sets={sets} />
       <table>

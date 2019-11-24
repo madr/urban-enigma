@@ -47,7 +47,7 @@ const Lbs2Kg = _props => {
   };
   return (
     <React.Fragment>
-      <div className="legend flex--space-between">
+      <div className="legend flex--space-between divider">
         <h1>Lbs till Kg</h1>
         <p>
           <a href="https://sv.wikipedia.org/wiki/Pund_(viktenhet)">

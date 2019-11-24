@@ -46,10 +46,24 @@ ul {
 summary {
   padding: 1em 0.5em;
   background-color: #222;
-  background-image: linear-gradient(#222, #111);
   color: #fff;
 
+  &::marker {
+    width: 2em;
+  }
+
+  > span {
+    display: inline-flex;
+    width: calc(100% - 1.5em);
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  :nth-child(even) > & {
+    background-color: #1a1a1a;
+  }
+
   [open] & {
-    background: #111;
+    background: #000;
   }
 }

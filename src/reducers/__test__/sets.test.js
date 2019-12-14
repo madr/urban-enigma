@@ -1,5 +1,5 @@
 import reducer from "../sets";
-import { createSet, dropSet } from "../../actions";
+import { createSet, dropSet, updateSet } from "../../actions";
 
 describe("sets", () => {
   const set1 = { id: 1, dummy: "data" };
@@ -30,6 +30,19 @@ describe("sets", () => {
       const newState = reducer(currentState, action);
 
       expect(newState).toEqual([set1]);
+    });
+  });
+
+  describe("update", () => {
+    it("updates a set", () => {
+      const currentState = [set1, set2];
+      const updatedSet = { updated: true, ...set2 };
+      const expected = [set1, updatedSet];
+
+      const action = updateSet(updatedSet);
+      const newState = reducer(currentState, action);
+
+      expect(newState).toEqual(expected);
     });
   });
 });

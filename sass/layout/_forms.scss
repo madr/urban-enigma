@@ -35,10 +35,10 @@ input[type="checkbox"] {
 }
 
 output {
-  min-width: 2em;
+  min-width: 40%;
   font-size: 2.5em;
   line-height: 3;
-  text-align: center;
+  text-align: right;
 
   &:before {
     content: "=";

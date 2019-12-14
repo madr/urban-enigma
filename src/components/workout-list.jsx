@@ -4,7 +4,7 @@ import Workout from "../containers/workout";
 import { groupByExercise } from "./workout";
 
 export default props => {
-  const { workouts, ongoingWorkout } = props;
+  const { workouts, ongoingWorkout, editSet, dropSet } = props;
   const ongoing = groupByExercise(ongoingWorkout);
   return (
     <React.Fragment>
@@ -16,7 +16,13 @@ export default props => {
           <table>
             <tbody>
               {Object.entries(ongoing).map(([exercise, sets]) => (
-                <Set key={exercise} exercise={exercise} sets={sets} />
+                <Set
+                  key={exercise}
+                  exercise={exercise}
+                  sets={sets}
+                  edit={editSet}
+                  drop={dropSet}
+                />
               ))}
             </tbody>
           </table>

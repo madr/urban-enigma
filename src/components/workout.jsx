@@ -14,7 +14,7 @@ export const groupByExercise = sets =>
   }, {});
 
 export default props => {
-  const { doneAt, name, sets, collapse, fold } = props;
+  const { doneAt, name, sets, drop, edit, collapse, fold } = props;
   const handleOnToggle = elem => {
     if (!elem.open && sets.length) {
       fold(doneAt);
@@ -40,7 +40,13 @@ export default props => {
         <tbody>
           {groupedSets &&
             Object.entries(groupedSets).map(([exercise, sets]) => (
-              <Set key={exercise} exercise={exercise} sets={sets} />
+              <Set
+                key={exercise}
+                exercise={exercise}
+                sets={sets}
+                edit={edit}
+                drop={drop}
+              />
             ))}
         </tbody>
       </table>

@@ -1,5 +1,6 @@
 import {
   UPDATE_DRAFT,
+  EDIT_SET,
   PASTE_DRAFT,
   CREATE_SET,
   CREATE_WORKOUT
@@ -8,7 +9,17 @@ import nanoid from "nanoid";
 import d2s from "../helpers/d2s";
 
 const KEYS = ["exercise", "reps", "weight", "doneAt", "isWarmup"];
+const IMPORT_KEYS = ["id", "doneAt", ...KEYS];
 let changeset = {};
+
+export const forceType = (attr, value) => {
+  if (attr === "weight") {
+    return parseFloat(value);
+  } else if (attr === "reps") {
+    return parseInt(value, 10);
+  }
+  return value;
+};
 
 export const emptyDraft = () => ({
   id: nanoid(),
@@ -25,7 +36,7 @@ export default (currentState = emptyDraft(), action) => {
     case UPDATE_DRAFT:
       const { attr, value } = action.payload;
       changeset = {};
-      changeset[attr] = value;
+      changeset[attr] = forceType(attr, value);
       return {
         ...currentState,
         ...changeset
@@ -37,6 +48,17 @@ export default (currentState = emptyDraft(), action) => {
     case PASTE_DRAFT:
       changeset = {};
       KEYS.forEach(k => {
+        const value = action.payload[k];
+        if (value !== undefined) {
+          changeset[k] = value;
+        }
+      });
+      return {
+        ...currentState,
+        ...changeset
+      };
+    case EDIT_SET:
+      IMPORT_KEYS.forEach(k => {
         const value = action.payload[k];
         if (value !== undefined) {
           changeset[k] = value;

@@ -8,7 +8,7 @@ const mapStateToProps = state => {
     workouts: [...state.workouts].sort((a, b) =>
       a.doneAt < b.doneAt ? 1 : -1
     ),
-    ongoingWorkout: state.sets.filter(s => s.doneAt === today)
+    ongoingWorkout: state.sets.filter(s => s.doneAt === today).reverse()
   };
 };
 

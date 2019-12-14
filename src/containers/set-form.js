@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import SetForm from "../components/set-form";
-import { updateDraft, createSet } from "../actions";
+import { updateDraft, updateSet, createSet } from "../actions";
 import d2s from "../helpers/d2s";
 
 const mapStateToProps = state => ({
@@ -10,8 +10,9 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  createSet: draft => dispatch(createSet(draft)),
   updateDraft: (attr, value) => dispatch(updateDraft(attr, value)),
-  createSet: draft => dispatch(createSet(draft))
+  updateSet: draft => dispatch(updateSet(draft))
 });
 
 export default connect(

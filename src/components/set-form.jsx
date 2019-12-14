@@ -2,9 +2,18 @@ import React from "react";
 import { ExerciseField, WeightRepsFields, IsWarmupField } from "./fields";
 import PasteSet from "../containers/paste-set";
 import saveIcon from "../../svg/floppy-disk.svg";
+import { updateSet } from "../actions";
 
 export default props => {
-  const { draft, updateDraft, createSet, exercises, setCount } = props;
+  const {
+    draft,
+    updateDraft,
+    createSet,
+    updateSet,
+    exercises,
+    setCount,
+    edit
+  } = props;
   const { exercise, reps, weight, isWarmup } = draft;
 
   const handleOnChange = evt => {
@@ -19,24 +28,42 @@ export default props => {
   const handleOnSubmit = evt => {
     evt.preventDefault();
     if (!!draft.exercise) {
-      createSet(draft);
+      if (edit) {
+        updateSet(draft);
+      } else {
+        createSet(draft);
+      }
     }
   };
 
   return (
     <React.Fragment>
       <header>
-        <h1>Lägg till set #{setCount + 1}</h1>
-        <span>
-          <PasteSet />
-          <button type="submit" form="new-set">
-            <img src={saveIcon} alt="Spara" />
-          </button>
-        </span>
+        {!edit && (
+          <React.Fragment>
+            <h1>Lägg till set #{setCount + 1}</h1>
+            <span>
+              <PasteSet />
+              <button type="submit" form="set-form">
+                <img src={saveIcon} alt="Spara" />
+              </button>
+            </span>
+          </React.Fragment>
+        )}
+        {edit && (
+          <React.Fragment>
+            <h1>Uppdatera set</h1>
+            <span>
+              <button type="submit" form="set-form">
+                <img src={saveIcon} alt="Spara" />
+              </button>
+            </span>
+          </React.Fragment>
+        )}
       </header>
       <main>
         <form
-          id="new-set"
+          id="set-form"
           className="form"
           onSubmit={handleOnSubmit}
           method="post"

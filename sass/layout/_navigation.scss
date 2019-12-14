@@ -21,12 +21,17 @@ button {
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 
   + button {
-    margin-left: 2em;
+    margin-left: 0.75em;
   }
 
   > img {
     width: 24px;
     height: 24px;
     object-fit: contain;
+
+    table & {
+      width: 0.8em;
+      height: 0.8em;
+    }
   }
 }

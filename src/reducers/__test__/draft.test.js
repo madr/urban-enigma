@@ -1,5 +1,6 @@
-import reducer, { emptyDraft } from "../draft";
+import reducer, { emptyDraft, forceType } from "../draft";
 import {
+  editSet,
   updateDraft,
   pasteDraft,
   createSet,
@@ -17,7 +18,18 @@ describe("drafts", () => {
     expect(initialState).toEqual(expected);
   });
 
-  describe("resets draft draft to initial statewhen set is created", () => {
+  it("force types", () => {
+    const weightExpected = 12.5;
+    const repsExpected = 10;
+
+    const weight = forceType("weight", "12.5");
+    const reps = forceType("reps", "10");
+
+    expect(weight).toEqual(weightExpected);
+    expect(reps).toEqual(repsExpected);
+  });
+
+  describe("resets draft draft to initial state when set is created", () => {
     it("drops a set", () => {
       const currentState = { a: "draft" };
       const expected = emptyDraft();
@@ -82,6 +94,26 @@ describe("drafts", () => {
       const expected = { ...currentState, ...values };
 
       const action = pasteDraft(values);
+      const newState = reducer(currentState, action);
+
+      expect(newState).toEqual(expected);
+    });
+  });
+
+  describe("edit set", () => {
+    it("imports an existing set", () => {
+      const currentState = emptyDraft();
+      const values = {
+        id: "abc123",
+        exercise: "skriva kod",
+        weight: 111,
+        reps: 6,
+        isWarmup: true,
+        doneAt: "2006-06-06"
+      };
+      const expected = { ...currentState, ...values };
+
+      const action = editSet(values);
       const newState = reducer(currentState, action);
 
       expect(newState).toEqual(expected);

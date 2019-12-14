@@ -1,6 +1,7 @@
 import reducer, { emptyDraft, forceType } from "../draft";
 import {
   editSet,
+  updateSet,
   updateDraft,
   pasteDraft,
   createSet,
@@ -29,20 +30,6 @@ describe("drafts", () => {
     expect(reps).toEqual(repsExpected);
   });
 
-  describe("resets draft draft to initial state when set is created", () => {
-    it("drops a set", () => {
-      const currentState = { a: "draft" };
-      const expected = emptyDraft();
-      delete expected.id;
-
-      const action = createSet({ what: "ever" });
-      const newState = reducer(currentState, action);
-      delete newState.id;
-
-      expect(newState).toEqual(expected);
-    });
-  });
-
   describe("update", () => {
     it("updates a draft", () => {
       const exercise = "skriva kod";
@@ -62,6 +49,20 @@ describe("drafts", () => {
       delete expected.id;
 
       const action = createWorkout("Leg day!", "2019-09-11");
+      const newState = reducer(currentState, action);
+      delete newState.id;
+
+      expect(newState).toEqual(expected);
+    });
+  });
+
+  describe("new set", () => {
+    it("resets draft to initial state when set is created", () => {
+      const currentState = { a: "draft" };
+      const expected = emptyDraft();
+      delete expected.id;
+
+      const action = createSet({ what: "ever" });
       const newState = reducer(currentState, action);
       delete newState.id;
 
@@ -115,6 +116,20 @@ describe("drafts", () => {
 
       const action = editSet(values);
       const newState = reducer(currentState, action);
+
+      expect(newState).toEqual(expected);
+    });
+  });
+
+  describe("update set", () => {
+    it("resets draft draft to initial state when updated set is saved", () => {
+      const currentState = { a: "draft" };
+      const expected = emptyDraft();
+      delete expected.id;
+
+      const action = updateSet({ what: "ever" });
+      const newState = reducer(currentState, action);
+      delete newState.id;
 
       expect(newState).toEqual(expected);
     });

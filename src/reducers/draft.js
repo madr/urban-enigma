@@ -3,6 +3,7 @@ import {
   EDIT_SET,
   PASTE_DRAFT,
   CREATE_SET,
+  UPDATE_SET,
   CREATE_WORKOUT
 } from "../actions";
 import nanoid from "nanoid";
@@ -42,6 +43,8 @@ export default (currentState = emptyDraft(), action) => {
         ...changeset
       };
     case CREATE_SET:
+      return emptyDraft();
+    case UPDATE_SET:
       return emptyDraft();
     case CREATE_WORKOUT:
       return emptyDraft();

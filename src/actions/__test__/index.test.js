@@ -24,6 +24,17 @@ describe("action creators", () => {
     });
   });
 
+  describe("UPDATE_SET", () => {
+    it("puts draft object as payload", () => {
+      const draft = { thing: "abc", anotherThing: "123" };
+      const expected = { type: actions.UPDATE_SET, payload: { draft } };
+
+      const action = actions.updateSet(draft);
+
+      expect(action).toEqual(expected);
+    });
+  });
+
   describe("DROP_SET", () => {
     it("puts id as payload", () => {
       const id = "abc";
@@ -112,6 +123,47 @@ describe("action creators", () => {
       };
 
       const action = actions.pasteDraft({
+        exercise,
+        weight,
+        reps,
+        isWarmup,
+        id,
+        doneAt
+      });
+
+      expect(action).toEqual(expected);
+    });
+  });
+
+  describe("EDIT_SET", () => {
+    it("copy a set-like object", () => {
+      const exercise = "skriver kod";
+      const weight = 111;
+      const reps = 6;
+      const isWarmup = true;
+      const expected = {
+        type: actions.EDIT_SET,
+        payload: { exercise, weight, reps, isWarmup }
+      };
+
+      const action = actions.editSet({ exercise, weight, reps, isWarmup });
+
+      expect(action).toEqual(expected);
+    });
+
+    it("includes doneAt and ids", () => {
+      const exercise = "skriver kod";
+      const weight = 111;
+      const reps = 6;
+      const isWarmup = true;
+      const id = "oh no!";
+      const doneAt = "before the creation of time";
+      const expected = {
+        type: actions.EDIT_SET,
+        payload: { id, doneAt, exercise, weight, reps, isWarmup }
+      };
+
+      const action = actions.editSet({
         exercise,
         weight,
         reps,

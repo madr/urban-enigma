@@ -2,7 +2,7 @@ import React from "react";
 import { ExerciseField, WeightRepsFields, IsWarmupField } from "./fields";
 import PasteSet from "../containers/paste-set";
 import saveIcon from "../../svg/floppy-disk.svg";
-import { updateSet } from "../actions";
+import checkIcon from "../../svg/checkmark.svg";
 
 export default props => {
   const {
@@ -55,7 +55,7 @@ export default props => {
             <h1>Uppdatera set</h1>
             <span>
               <button type="submit" form="set-form">
-                <img src={saveIcon} alt="Spara" />
+                <img src={checkIcon} alt="Spara" />
               </button>
             </span>
           </React.Fragment>

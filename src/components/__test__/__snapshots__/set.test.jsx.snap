@@ -6,7 +6,9 @@ Array [
     <th>
       Press
     </th>
-    <th>
+    <th
+      colSpan="2"
+    >
       70
        kg 
       <small>
@@ -29,6 +31,26 @@ Array [
       </big>
        kg
     </td>
+    <td>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ta bort"
+          src="1px.gif"
+        />
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ändra"
+          src="1px.gif"
+        />
+      </button>
+    </td>
   </tr>,
   <tr
     className=""
@@ -45,6 +67,26 @@ Array [
       </big>
        kg
     </td>
+    <td>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ta bort"
+          src="1px.gif"
+        />
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ändra"
+          src="1px.gif"
+        />
+      </button>
+    </td>
   </tr>,
   <tr
     className=""
@@ -60,6 +102,26 @@ Array [
         60
       </big>
        kg
+    </td>
+    <td>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ta bort"
+          src="1px.gif"
+        />
+      </button>
+      <button
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Ändra"
+          src="1px.gif"
+        />
+      </button>
     </td>
   </tr>,
 ]

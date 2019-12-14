@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { collapseWorkout, foldWorkout } from "../actions";
+import { collapseWorkout, foldWorkout, editSet, dropSet } from "../actions";
 import Workout from "../components/workout";
 
 const mapStateToProps = (state, ownProps) => {
@@ -12,6 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   collapse: doneAt => dispatch(collapseWorkout(doneAt)),
+  edit: draft => dispatch(editSet(draft)),
+  drop: draft => dispatch(dropSet(draft)),
   fold: doneAt => dispatch(foldWorkout(doneAt))
 });
 

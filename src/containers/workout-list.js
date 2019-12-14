@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import WorkoutList from "../components/workout-list";
 import d2s from "../helpers/d2s";
+import { dropSet, editSet } from "../actions";
 
 const mapStateToProps = state => {
   const today = d2s(new Date());
@@ -12,7 +13,10 @@ const mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = () => ({});
+const mapDispatchToProps = dispatch => ({
+  editSet: draft => dispatch(editSet(draft)),
+  dropSet: draft => dispatch(dropSet(draft))
+});
 
 export default connect(
   mapStateToProps,

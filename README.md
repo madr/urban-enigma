@@ -72,6 +72,24 @@ technical nature in mind:
     To add some gamification, and to show strength progress over time.
   </details>
 
+## Up next
+
+* **Workout planner**. Schedule and create a workout beforehand as a todo list. 
+  <details>
+    <summary>Why?</summary>
+    To decrease the app screen time during workout. Fewer presses and typing between sets.
+  </details>
+* **Rest timer**. A timer function to rest between sets. 
+  <details>
+    <summary>Why?</summary>
+    By adding a timer to the app, there is no need to switch app or split-screen between the phone clock app.
+  </details>
+* **Personal record score**. A list of PB's in for exercises, in reps and weights, and a timestamp.
+  <details>
+    <summary>Why?</summary>
+    To add some gamification, and to show strength progress over time.
+  </details>
+
 [1]: http://offlinefirst.org/
 [2]: https://parceljs.org/
 [3]: https://prettier.io/
